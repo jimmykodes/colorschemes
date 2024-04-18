@@ -203,8 +203,8 @@ func createTheme(luaDir string, scheme Scheme) error {
 
 var themeTmpl = `
 {{- define "style" -}}
-{ fg = {{ if ne .FG "-" }}c.{{ .FG }}{{else}}"fg"{{ end }}
-{{- if .BG }}, bg = {{if ne .BG "-" }}c.{{ .BG }}{{else}}"bg"{{end}}{{ end -}}
+{ {{ if ne .FG "-" }}fg = c.{{ .FG }}{{else}}"fg"{{ end }}
+{{- if .BG }}, {{if ne .BG "-" }}bg = c.{{ .BG }}{{else}}"bg"{{end}}{{ end -}}
 {{- if .Bold }}, bold = true{{ end -}}
 {{- if .Underline }}, underline = true{{ end -}}
 {{- if .Italic }}, italic = true{{ end }} }
