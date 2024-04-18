@@ -109,7 +109,7 @@ type Scheme struct {
 		Name  string `yaml:"name"`
 		Theme string `yaml:"theme"`
 	} `yaml:"metadata"`
-	Normal Highlight
+	Normal Highlight                       `yaml:"Normal"`
 	Colors map[string]string               `yaml:"colors"`
 	Groups map[string]map[string]Highlight `yaml:"groups"`
 }

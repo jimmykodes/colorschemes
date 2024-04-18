@@ -4,7 +4,7 @@ local c = require("system76.colors")
 local hl = vim.api.nvim_set_hl
 
 function M.setup()
-	hl(0, "Normal", { fg = c. })
+	hl(0, "Normal", { fg = c.fg, bg = c.bg })
 	-- alpha
 	hl(0, "DashboardCenter", { fg = c.purple })
 	hl(0, "DashboardFooter", { fg = c.cyan })
