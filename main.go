@@ -217,12 +217,14 @@ local hl = vim.api.nvim_set_hl
 
 function M.setup()
 {{- range $group, $gmap := .Groups }}
-    -- {{ $group }}
+	-- {{ $group }}
 	{{- range $name, $hl := $gmap }}
-    hl(0, "{{ $name }}", {{ template "style" $hl }})
+	hl(0, "{{ $name }}", {{ template "style" $hl }})
 	{{- end }}
 {{ end }}
 end
+
+return M
 `
 
 var initTmpl = `local M = {}
