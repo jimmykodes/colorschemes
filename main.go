@@ -109,6 +109,7 @@ type Scheme struct {
 		Name  string `yaml:"name"`
 		Theme string `yaml:"theme"`
 	} `yaml:"metadata"`
+	Normal Highlight
 	Colors map[string]string               `yaml:"colors"`
 	Groups map[string]map[string]Highlight `yaml:"groups"`
 }
@@ -203,8 +204,8 @@ func createTheme(luaDir string, scheme Scheme) error {
 
 var themeTmpl = `
 {{- define "style" -}}
-{ {{ if ne .FG "-" }}fg = c.{{ .FG }}{{else}}"fg"{{ end }}
-{{- if .BG }}, {{if ne .BG "-" }}bg = c.{{ .BG }}{{else}}"bg"{{end}}{{ end -}}
+{ fg = {{ if ne .FG "-" }}c.{{ .FG }}{{else}}"fg"{{ end }}
+{{- if .BG }}, bg = {{if ne .BG "-" }}c.{{ .BG }}{{else}}"bg"{{end}}{{ end -}}
 {{- if .Bold }}, bold = true{{ end -}}
 {{- if .Underline }}, underline = true{{ end -}}
 {{- if .Italic }}, italic = true{{ end }} }
@@ -216,6 +217,7 @@ local c = require("{{ .Metadata.Name }}.colors")
 local hl = vim.api.nvim_set_hl
 
 function M.setup()
+	hl(0, "Normal", {{ template "style" .Normal }})
 {{- range $group, $gmap := .Groups }}
 	-- {{ $group }}
 	{{- range $name, $hl := $gmap }}

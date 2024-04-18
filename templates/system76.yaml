@@ -43,9 +43,10 @@ colors:
   cyan_test: '#00dfff'
   ui_blue: '#264F78'
 
+Normal: 'fg bg'
+
 groups:
   highlights:
-    Normal: 'fg bg'
     SignColumn: '- bg'
     MsgArea: 'fg bg'
     ModeMsg: 'fg bg'
