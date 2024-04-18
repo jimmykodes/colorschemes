@@ -204,7 +204,7 @@ func createTheme(luaDir string, scheme Scheme) error {
 var themeTmpl = `
 {{- define "style" -}}
 { fg = {{ if ne .FG "-" }}c.{{ .FG }}{{else}}"fg"{{ end }}
-{{- if .BG }}, bg = {{if ne .BG "-" }}{{ .BG }}{{else}}"bg"{{end}}{{ end -}}
+{{- if .BG }}, bg = {{if ne .BG "-" }}c.{{ .BG }}{{else}}"bg"{{end}}{{ end -}}
 {{- if .Bold }}, bold = true{{ end -}}
 {{- if .Underline }}, underline = true{{ end -}}
 {{- if .Italic }}, italic = true{{ end }} }
