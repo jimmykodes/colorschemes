@@ -150,7 +150,7 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 }
 
 func createVim(colorDir string, scheme Scheme) error {
-	f, err := os.Create(filepath.Join(colorDir, scheme.Metadata.Name+".lua"))
+	f, err := os.Create(filepath.Join(colorDir, scheme.Metadata.Name+".vim"))
 	if err != nil {
 		return err
 	}
@@ -246,10 +246,13 @@ return M
 `
 
 var colorsTmpl = `local M = {}
-{{ range $name, $color := .Colors }}M.{{$name}} = '$color'
+{{ range $name, $color := .Colors }}M.{{$name}} = '{{ $color }}'
 {{end}}
 return M
 `
 
-var vimTmpl = `lua require("{{ .Metadata.Name }}").setup()
+var vimTmpl = `lua << EOF
+local {{.Metadata.Name }} = require("{{ .Metadata.Name }}")
+{{ .Metadata.Name }}.setup()
+EOF
 `
