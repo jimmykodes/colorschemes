@@ -196,6 +196,8 @@ groups:
     TSStructure: 'light_blue'
     TSStrong: 'yellow_orange'
     TSQueryLinterError: 'warning_orange'
+    TSInstalled: 'green'
+    TSMissing: 'error_red'
 
   markdown:
     markdownBlockquote: 'accent'
