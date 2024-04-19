@@ -150,7 +150,9 @@ groups:
     TabLineFill: 'white alt_bg'
 
   bufferline:
-    BufferLineFill: '- black'
+    BufferLineFill: 'light_gray black'
+    BufferLineSeparator: 'black black'
+    BufferLineSeparatorSelected: 'black bg'
 
     # BufferCurrentIndex: 'fg bg'
     # BufferCurrentMod: 'info_yellow bg'

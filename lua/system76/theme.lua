@@ -11,7 +11,9 @@ function M.setup()
 	hl(0, "DashboardHeader", { fg = c.light_blue,  })
 
 	-- bufferline
-	hl(0, "BufferLineFill", { bg = c.black,  })
+	hl(0, "BufferLineFill", { fg = c.light_gray, bg = c.black,  })
+	hl(0, "BufferLineSeparator", { fg = c.black, bg = c.black,  })
+	hl(0, "BufferLineSeparatorSelected", { fg = c.black, bg = c.bg,  })
 
 	-- cursor
 	hl(0, "Cursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
