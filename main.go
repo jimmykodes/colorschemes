@@ -109,6 +109,16 @@ type Scheme struct {
 		Name  string `yaml:"name"`
 		Theme string `yaml:"theme"`
 	} `yaml:"metadata"`
+	Lualine struct {
+		Normal  string `yaml:"normal"`
+		Insert  string `yaml:"insert"`
+		Visual  string `yaml:"visual"`
+		Replace string `yaml:"replace"`
+		Command string `yaml:"command"`
+		Fg      string `yaml:"fg"`
+		Bg      string `yaml:"bg"`
+		BgAlt   string `yaml:"bg_alt"`
+	} `yaml:"lualine"`
 	Normal Highlight                       `yaml:"Normal"`
 	Colors map[string]string               `yaml:"colors"`
 	Groups map[string]map[string]Highlight `yaml:"groups"`
@@ -134,6 +144,11 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 		return err
 	}
 
+	lualineDir := filepath.Join("lua", "lualine", "themes")
+	if err := createLualine(lualineDir, scheme); err != nil {
+		return err
+	}
+
 	luaDir := filepath.Join("lua", scheme.Metadata.Name)
 	if err := os.MkdirAll(luaDir, 0766); err != nil && !os.IsExist(err) {
 		return err
@@ -148,6 +163,17 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 		return err
 	}
 	return nil
+}
+
+func createLualine(themesDir string, scheme Scheme) error {
+	f, err := os.Create(filepath.Join(themesDir, scheme.Metadata.Name+".lua"))
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	tmpl := template.Must(template.New("lualine").Parse(lualineTmpl))
+	return tmpl.Execute(f, scheme)
 }
 
 func createVim(colorDir string, scheme Scheme) error {
@@ -202,7 +228,8 @@ func createTheme(luaDir string, scheme Scheme) error {
 	return nil
 }
 
-var themeTmpl = `
+var (
+	themeTmpl = `
 {{- define "style" -}}
 { {{ if ne .FG "-" }}fg = c.{{ .FG }}, {{ end }}
 {{- if .BG }}{{if ne .BG "-" }}bg = c.{{ .BG }}, {{end}}{{ end -}}
@@ -229,7 +256,7 @@ end
 return M
 `
 
-var initTmpl = `local M = {}
+	initTmpl = `local M = {}
 local theme = require("{{ .Metadata.Name }}.theme")
 
 function M.setup()
@@ -249,14 +276,46 @@ end
 return M
 `
 
-var colorsTmpl = `local M = {}
+	colorsTmpl = `local M = {}
 {{ range $name, $color := .Colors }}M.{{$name}} = '{{ $color }}'
 {{end}}
 return M
 `
 
-var vimTmpl = `lua << EOF
+	vimTmpl = `lua << EOF
 local {{.Metadata.Name }} = require("{{ .Metadata.Name }}")
 {{ .Metadata.Name }}.setup()
 EOF
 `
+
+	lualineTmpl = `local colors = {
+	normal  = '{{ .Lualine.Normal | index .Colors }}',
+	insert  = '{{ .Lualine.Insert | index .Colors }}',
+	visual  = '{{ .Lualine.Visual | index .Colors }}',
+	replace = '{{ .Lualine.Replace | index .Colors }}',
+	command = '{{ .Lualine.Command | index .Colors }}',
+
+	fg      = '{{ .Lualine.Fg | index .Colors }}',
+	bg      = '{{ .Lualine.Bg | index .Colors }}',
+	bg_alt  = '{{ .Lualine.BgAlt | index .Colors }}',
+}
+
+return {
+	normal = {
+		a = { fg = colors.bg, bg = colors.normal },
+		b = { fg = colors.normal, bg = colors.bg },
+		c = { fg = colors.fg, bg = colors.bg_alt },
+	},
+	insert = { a = { fg = colors.bg, bg = colors.insert } },
+	visual = { a = { fg = colors.bg, bg = colors.visual } },
+	command = { a = { fg = colors.bg, bg = colors.command } },
+	replace = { a = { fg = colors.bg, bg = colors.replace } },
+
+	inactive = {
+		a = { bg = colors.bg, fg = colors.normal },
+		b = { bg = colors.bg, fg = colors.bg_alt },
+		c = { bg = colors.bg, fg = colors.bg_alt },
+	},
+}
+`
+)

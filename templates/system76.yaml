@@ -44,6 +44,16 @@ colors:
   cyan_test: '#00dfff'
   ui_blue: '#264F78'
 
+lualine:
+  normal: blue
+  insert: green
+  visual: purple
+  replace: red
+  command: orange
+  fg: fg
+  bg: bg
+  bg_alt: black
+
 Normal: 'fg bg'
 
 groups:
