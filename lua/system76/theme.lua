@@ -292,7 +292,7 @@ function M.setup()
 	-- whichkey
 	hl(0, "WhichKey", { fg = c.purple,  })
 	hl(0, "WhichKeyDesc", { fg = c.light_blue,  })
-	hl(0, "WhichKeyFloat", { bg = c.dark,  })
+	hl(0, "WhichKeyFloat", { bg = c.black,  })
 	hl(0, "WhichKeyGroup", { fg = c.blue,  })
 	hl(0, "WhichKeySeperator", { fg = c.green,  })
 
