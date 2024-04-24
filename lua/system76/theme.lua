@@ -294,7 +294,8 @@ function M.setup()
 	hl(0, "WhichKeyDesc", { fg = c.light_blue,  })
 	hl(0, "WhichKeyFloat", { bg = c.black,  })
 	hl(0, "WhichKeyGroup", { fg = c.blue,  })
-	hl(0, "WhichKeySeperator", { fg = c.green,  })
+	hl(0, "WhichKeySeparator", { fg = c.green,  })
+	hl(0, "whichKeyBorder", { fg = c.fg, bg = c.black,  })
 
 end
 

@@ -265,10 +265,11 @@ groups:
 
   whichkey:
     WhichKey: 'purple'
-    WhichKeySeperator: 'green'
+    WhichKeySeparator: 'green'
     WhichKeyGroup: 'blue'
     WhichKeyDesc: 'light_blue'
     WhichKeyFloat: '- black'
+    whichKeyBorder: 'fg black'
 
   git:
     SignAdd: 'sign_add'
