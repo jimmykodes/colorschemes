@@ -3,65 +3,43 @@ metadata:
   theme: dark
 
 colors:
-  deep_purple: '#070F2B'
+  white: "#e5dada"
+  light_gray: "lighten gray 50"
+  gray: "#8c92ac"
+  dark_gray: "#36454f"
 
-  dark_purple: 'darken purple 50'
-  purple: '#1B1A55'
-  light_purple: 'lighten purple 80'
+  yellow: "#d7ba89"
+  info_yellow: "darken yellow 10"
+  yellow_orange: "ref info_yellow"
 
-  light_blue: 'lighten blue 50'
-  blue: '#535C91'
-  dark_blue: 'darken blue 30'
+  cyan: "#a1cca5"
+  green: "#49a078"
+  red: "#7d5c65"
+  orange: 'lighten red 10'
 
-  white: 'lighten gray 80'
-  light_gray: 'lighten gray 50'
-  gray: '#9290C3'
-  dark_gray: 'darken gray 30'
+  blue: "#a7c2cc"
+  hint_blue: "darken blue 10"
+  ui_blue: "lighten blue 10"
 
-  fg: 'ref gray'
-  bg: 'darken deep_purple 20'
-  black: 'darken bg 50'
+  search_blue: "ref hint_blue"
+  search_orange: "ref info_yellow"
 
-  alt_bg: 'lighten bg 20'
-  accent: 'lighten fg 20'
-  dark: 'darken bg 20'
+  magenta: "#b47eb3"
+  purple: "#49416d"
+  light_purple: "#736b92"
+
+  bg: "darken purple 70"
+  fg: "lighten gray 50"
+
+  alt_bg: "lighten bg 20"
+  black: "darken bg 10"
+
+  comment: "ref dark_gray"
+  context: "ref dark_gray"
 
   cursor_fg: 'ref bg'
-  cursor_bg: 'ref blue'
+  cursor_bg: 'ref magenta'
 
-  search_orange: '#613214'
-  search_blue: '#5e81ac'
-  # white: '#D8DEE9'
-
-  # light_gray: '#c8c9c1'
-  # gray: '#98918d'
-  # dark_gray: '#3e3e3e'
-  
-  # light_blue: '#81c8d6'
-  # blue: '#18a9c7'
-  # dark_blue: '#223E55'
-  
-  comment: '#787878'
-  context: '#606060'
-  green: '#6eaa76'
-  cyan: '#7ec589'
-  light_green: '#B5CEA8'
-  red: '#f15d22'
-  light_red: '#D16969'
-  orange: '#d19a66'
-  yellow: '#eece61'
-  yellow_orange: '#D7BA7D'
-  magenta: '#D16D9E'
-  sign_add: '#587c0c'
-  sign_change: '#0c7d9d'
-  sign_delete: '#b81a22'
-  error_red: '#F44747'
-  warning_orange: '#ff8800'
-  info_yellow: '#FFCC66'
-  hint_blue: '#4FC1FF'
-  purple_test: '#ff007c'
-  cyan_test: '#00dfff'
-  ui_blue: '#264F78'
 lualine:
   normal: blue
   insert: green
@@ -82,8 +60,8 @@ groups:
     TermCursor: 'cursor_fg cursor_bg'
     TermCursorNC: 'cursor_fg cursor_bg'
     CursorLineNr: 'light_gray - b'
-    CursorLine: '- dark'
-    CursorColumn: '- dark'
+    CursorLine: '- black'
+    CursorColumn: '- black'
 
   types:
     Operator: 'white'
@@ -101,26 +79,27 @@ groups:
     Variable: 'grey'
     Identifier: 'gray'
 
+    Constant: 'magenta'
+    Boolean: 'magenta'
+    Type: 'magenta'
+    StorageClass: 'magenta'
+    Structure: 'magenta'
+    Typedef: 'magenta'
+    Tag: 'magenta'
 
-    Constant: 'light_blue'
-    Boolean: 'light_blue'
-    Type: 'light_blue'
-    StorageClass: 'light_blue'
-    Structure: 'light_blue'
-    Typedef: 'light_blue'
-    Tag: 'light_blue'
-
-    Conditional: 'cyan'
     Keyword: 'cyan'
     Statement: 'cyan'
     Repeat: 'cyan'
     Label: 'cyan'
-    Exception: 'cyan'
     Include: 'cyan'
-    PreProc: 'cyan'
-    Define: 'cyan'
-    Macro: 'cyan'
-    PreCondit: 'cyan'
+
+    # TODO: Find a better color for this
+    Conditional: 'dark_blue'
+    Exception: 'dark_blue'
+    PreProc: 'dark_blue'
+    Define: 'dark_blue'
+    Macro: 'dark_blue'
+    PreCondit: 'dark_blue'
 
 
   diff:
@@ -129,7 +108,7 @@ groups:
     DiffDelete: 'alt_bg sign_delete'
 
   highlights:
-    MatchWord: '- - u'
+    MatchWord: 'blue alt_bg'
     MatchParen: 'hint_blue bg u'
     MatchWordCur: '- - u'
     MatchParenCur: '- - u'
@@ -152,9 +131,9 @@ groups:
     FloatBorder: 'gray alt_bg'
     Whitespace: 'bg -'
     VertSplit: 'fg bg'
-    ColorColumn: '- dark'
-    NormalFloat: '- dark'
-    Visual: '- ui_blue'
+    ColorColumn: '- black'
+    NormalFloat: '- black'
+    Visual: 'alt_bg ui_blue'
     VisualNOS: '- alt_bg'
     WarningMsg: 'error_red bg'
     QuickFixLine: '- black'
@@ -165,9 +144,9 @@ groups:
     SpecialKey: 'blue - b'
     Title: 'blue - b'
     ErrorMsg: 'error_red bg b'
-    Search: 'light_gray search_blue'
-    IncSearch: 'light_gray search_blue'
-    Substitute: 'light_gray search_orange'
+    Search: 'alt_bg search_blue'
+    IncSearch: 'alt_bg search_blue'
+    Substitute: 'alt_bg search_orange'
     MoreMsg: 'orange'
     Question: 'orange'
     EndOfBuffer: 'bg'
@@ -353,7 +332,7 @@ groups:
     LspDiagnosticsUnderlineHint: '- - u'
 
     QuickScopePrimary: 'purple_test - u'
-    QuickScopeSecondary: 'cyan_test - u'
+    QuickScopeSecondary: 'cyan - u'
 
   telescope:
     TelescopeSelection: 'hint_blue'
@@ -401,5 +380,5 @@ groups:
 
     IndentBlanklineContextChar: 'context'
     IndentBlanklineChar: 'dark_gray'
-    IndentBlanklineSpaceChar: 'cyan_test'
+    IndentBlanklineSpaceChar: 'cyan'
     IndentBlanklineSpaceCharBlankline: 'info_yellow'
