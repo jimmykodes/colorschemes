@@ -6,25 +6,31 @@ colors:
   white: "#e5dada"
   light_gray: "lighten gray 50"
   gray: "#8c92ac"
-  dark_gray: "#36454f"
+  _gray: "#36454f"
+  dark_gray: "lighten _gray 10"
 
   yellow: "#d7ba89"
   info_yellow: "darken yellow 10"
-  yellow_orange: "ref info_yellow"
+  yellow_orange: "ref orange"
 
   cyan: "#a1cca5"
   green: "#49a078"
   red: "#7d5c65"
-  orange: 'lighten red 10'
+  orange: '#d99058'
 
-  blue: "#a7c2cc"
+  blue: "#90b0ff"
+  light_blue: "lighten blue 10"
   hint_blue: "darken blue 10"
-  ui_blue: "lighten blue 10"
+  ui_blue: "ref light_blue"
+
+  accent: 'ref light_gray'
+  warning_orange: "ref orange"
+  purple_test: "ref purple"
 
   search_blue: "ref hint_blue"
   search_orange: "ref info_yellow"
 
-  magenta: "#b47eb3"
+  magenta: "#bf79bf"
   purple: "#49416d"
   light_purple: "#736b92"
 
@@ -39,6 +45,12 @@ colors:
 
   cursor_fg: 'ref bg'
   cursor_bg: 'ref magenta'
+
+  error_red: 'ref red'
+
+  sign_add: 'ref green'
+  sign_change: 'ref blue'
+  sign_delete: 'ref orange'
 
 lualine:
   normal: blue
@@ -68,7 +80,6 @@ groups:
     SpecialChar: 'white'
 
     Character: 'orange'
-    Special: 'orange'
 
     Function: 'yellow'
 
@@ -76,7 +87,7 @@ groups:
     Number: 'green'
     Float: 'green'
 
-    Variable: 'grey'
+    Variable: 'gray'
     Identifier: 'gray'
 
     Constant: 'magenta'
@@ -87,19 +98,19 @@ groups:
     Typedef: 'magenta'
     Tag: 'magenta'
 
-    Keyword: 'cyan'
-    Statement: 'cyan'
-    Repeat: 'cyan'
-    Label: 'cyan'
-    Include: 'cyan'
+    Keyword: 'blue'
+    Statement: 'blue'
+    Repeat: 'blue'
+    Label: 'blue'
+    Include: 'blue'
+    Conditional: 'blue'
 
-    # TODO: Find a better color for this
-    Conditional: 'dark_blue'
-    Exception: 'dark_blue'
-    PreProc: 'dark_blue'
-    Define: 'dark_blue'
-    Macro: 'dark_blue'
-    PreCondit: 'dark_blue'
+    Special: 'cyan'
+    Exception: 'cyan'
+    PreProc: 'cyan'
+    Define: 'cyan'
+    Macro: 'cyan'
+    PreCondit: 'cyan'
 
 
   diff:
@@ -121,7 +132,7 @@ groups:
     SpellLocal: 'green - u'
     SpellRare: 'purple - u'
     NormalNC: 'fg bg'
-    Pmenu: 'light_gray popup_back'
+    Pmenu: 'light_gray alt_bg'
     PmenuSel: 'alt_bg blue'
     WildMenu: 'alt_bg blue'
     Comment: 'comment - i'
@@ -168,23 +179,6 @@ groups:
     BufferLineFill: 'light_gray black'
     BufferLineSeparator: 'black black'
     BufferLineSeparatorSelected: 'black bg'
-
-    # BufferCurrentIndex: 'fg bg'
-    # BufferCurrentMod: 'info_yellow bg'
-    # BufferCurrentSign: 'hint_blue bg'
-    # BufferCurrentTarget: 'yellow bg b'
-    #
-    # BufferVisible: 'fg black'
-    # BufferVisibleIndex: 'fg bg'
-    # BufferVisibleMod: 'info_yellow bg'
-    # BufferVisibleSign: 'gray bg'
-    # BufferVisibleTarget: 'red bg b'
-    #
-    # BufferInactive: 'gray purple'
-    # BufferInactiveIndex: 'gray alt_bg'
-    # BufferInactiveMod: 'info_yellow alt_bg'
-    # BufferInactiveSign: 'gray alt_bg'
-    # BufferInactiveTarget: 'red alt_bg b'
 
   treesitter:
     TSComment: 'comment'

@@ -1,9 +1,9 @@
 local colors = {
-	normal  = '#a7c2cc',
+	normal  = '#90b0ff',
 	insert  = '#49a078',
 	visual  = '#49416d',
 	replace = '#7d5c65',
-	command = '#87666f',
+	command = '#d99058',
 
 	fg      = '#bec4de',
 	bg      = '#030027',

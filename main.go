@@ -275,10 +275,22 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 		return err
 	}
 
+	// MARK: parsing
 	for _, color := range scheme.Colors {
 		_, err := color.Value(scheme.Colors)
 		if err != nil {
 			return err
+		}
+	}
+
+	for _, group := range scheme.Groups {
+		for name, hl := range group {
+			if _, ok := scheme.Colors[hl.FG]; hl.FG != "" && hl.FG != "-" && !ok {
+				fmt.Printf("%s: invalid fg color '%s' for name %s\n", schemeTemplate.Name, hl.FG, name)
+			}
+			if _, ok := scheme.Colors[hl.BG]; hl.BG != "" && hl.BG != "-" && !ok {
+				fmt.Printf("%s: invalid bg color '%s' for name %s\n", schemeTemplate.Name, hl.BG, name)
+			}
 		}
 	}
 
