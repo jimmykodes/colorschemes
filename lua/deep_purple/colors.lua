@@ -1,4 +1,5 @@
 local M = {}
+
 M._gray = '#36454f'
 M.accent = '#bec4de'
 M.alt_bg = '#17143b'

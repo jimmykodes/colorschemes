@@ -1,0 +1,24 @@
+{{- define "style" -}}
+{ {{ if ne .FG "-" }}fg = c.{{ .FG }}, {{ end }}
+{{- if .BG }}{{if ne .BG "-" }}bg = c.{{ .BG }}, {{end}}{{ end -}}
+{{- if .Bold }}bold = true, {{ end -}}
+{{- if .Underline }}underline = true, {{ end -}}
+{{- if .Italic }}italic = true, {{ end }} }
+{{- end -}}
+
+local M = {}
+
+local c = require("{{ .Metadata.Name }}.colors")
+local hl = vim.api.nvim_set_hl
+
+function M.setup()
+	hl(0, "Normal", {{ template "style" .Normal }})
+{{- range $group, $gmap := .Groups }}
+	-- {{ $group }}
+	{{- range $name, $hl := $gmap }}
+	hl(0, "{{ $name }}", {{ template "style" $hl }})
+	{{- end }}
+{{ end }}
+end
+
+return M

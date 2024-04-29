@@ -1,0 +1,4 @@
+lua << EOF
+local {{.Metadata.Name }} = require("{{ .Metadata.Name }}")
+{{ .Metadata.Name }}.setup()
+EOF
