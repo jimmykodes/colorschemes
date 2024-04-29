@@ -104,6 +104,14 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 		return err
 	}
 
+	htmlDir := "html"
+	if err := os.MkdirAll(htmlDir, 0766); err != nil && !os.IsExist(err) {
+		return err
+	}
+	if err := templates.HTML(htmlDir, scheme); err != nil {
+		return err
+	}
+
 	colorDir := "colors"
 	if err := os.MkdirAll(colorDir, 0766); err != nil && !os.IsExist(err) {
 		return err

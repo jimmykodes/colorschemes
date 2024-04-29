@@ -44,6 +44,21 @@ colors:
   cyan_test: '#00dfff'
   ui_blue: '#264F78'
 
+html:
+  - bg
+  - fg
+  - white
+  - gray
+  - black
+  - red
+  - magenta
+  - purple
+  - blue
+  - cyan
+  - green
+  - yellow
+  - orange
+
 lualine:
   normal: blue
   insert: green

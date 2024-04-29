@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ .Metadata.Name }}</title>
+	<style>
+	{{ $colormap := .Colors }}
+	{{ range .HTML }}
+		.{{ . }} {
+			background-color: {{ index $colormap . }};
+		}
+	{{end}}
+		.section {
+			width: 6vw;
+			height: 6vh;
+		}
+
+		.flex {
+			display: flex;
+			flex-direction: row;
+		}
+	</style>
+
+</head>
+
+<body class="bg">
+	<div class="flex">
+	{{ range .HTML }}
+		<div class="section {{ . }}"></div>
+	{{end}}
+	</div>
+</body>
+
+</html>

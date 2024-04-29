@@ -23,6 +23,7 @@ type Scheme struct {
 		BgAlt   string `yaml:"bg_alt"`
 	} `yaml:"lualine"`
 	Normal Highlight                       `yaml:"Normal"`
+	HTML   []string                        `yaml:"html"`
 	Colors map[string]*Color               `yaml:"colors"`
 	Groups map[string]map[string]Highlight `yaml:"groups"`
 }

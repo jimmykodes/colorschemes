@@ -52,6 +52,22 @@ colors:
   sign_change: 'ref blue'
   sign_delete: 'ref orange'
 
+html:
+  - bg
+  - fg
+  - white
+  - gray
+  - black
+  - red
+  - magenta
+  - purple
+  - blue
+  - cyan
+  - green
+  - yellow
+  - orange
+
+
 lualine:
   normal: blue
   insert: green
