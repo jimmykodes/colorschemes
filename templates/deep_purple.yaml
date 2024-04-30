@@ -14,9 +14,12 @@ colors:
   yellow_orange: "ref orange"
 
   cyan: "#a1cca5"
-  green: "#49a078"
-  red: "#7d5c65"
+  red: "#9d5060"
+  light_red: "lighten red 20"
   orange: '#d99058'
+
+  green: "#49a078"
+  light_green: "lighten green 20"
 
   blue: "#90b0ff"
   light_blue: "lighten blue 10"
@@ -67,6 +70,30 @@ html:
   - yellow
   - orange
 
+wezterm:
+  fg: fg
+  bg: bg
+  cursor_fg: bg
+  cursor_bg: magenta
+  cursor_border: magenta
+  selection_bg: light_blue
+  selection_fg: bg
+  black: dark_gray
+  red: red
+  green: green
+  yellow: orange
+  blue: blue
+  purple: light_purple
+  cyan: cyan
+  white: white
+  bright_black: gray
+  bright_red: light_red
+  bright_green: light_green
+  bright_yellow: yellow
+  bright_blue: light_blue
+  bright_purple: magenta
+  bright_cyan: cyan
+  bright_white: white
 
 lualine:
   normal: blue

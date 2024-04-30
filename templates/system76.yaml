@@ -59,6 +59,31 @@ html:
   - yellow
   - orange
 
+wezterm:
+  fg: fg
+  bg: bg
+  cursor_fg: bg
+  cursor_bg: cyan
+  cursor_border: cyan
+  selection_bg: ui_blue
+  selection_fg: bg
+  black: dark_gray
+  red: red
+  green: cyan
+  yellow: yellow_orange
+  blue: blue
+  purple: purple
+  cyan: cyan
+  white: white
+  bright_black: gray
+  bright_red: light_red
+  bright_green: cyan
+  bright_yellow: yellow
+  bright_blue: light_blue
+  bright_purple: magenta
+  bright_cyan: cyan
+  bright_white: white
+
 lualine:
   normal: blue
   insert: green

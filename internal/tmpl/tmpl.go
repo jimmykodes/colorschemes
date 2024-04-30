@@ -43,6 +43,15 @@ func (t *Tmpl) HTML(htmlDir string, scheme scheme.Scheme) error {
 	return t.tmpl.ExecuteTemplate(f, "html.gotmpl", scheme)
 }
 
+func (t *Tmpl) WezTerm(weztermDir string, scheme scheme.Scheme) error {
+	f, err := os.Create(filepath.Join(weztermDir, scheme.Metadata.Name+".toml"))
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	return t.tmpl.ExecuteTemplate(f, "wezterm.gotmpl", scheme)
+}
+
 func (t *Tmpl) Vim(colorDir string, scheme scheme.Scheme) error {
 	f, err := os.Create(filepath.Join(colorDir, scheme.Metadata.Name+".vim"))
 	if err != nil {

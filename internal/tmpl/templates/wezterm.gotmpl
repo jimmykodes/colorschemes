@@ -1,0 +1,36 @@
+[colors]
+ansi = [
+	 '{{ .WezTerm.Black | index .Colors }}', # black
+	 '{{ .WezTerm.Red | index .Colors }}', # red
+	 '{{ .WezTerm.Green | index .Colors }}', # green
+	 '{{ .WezTerm.Yellow | index .Colors }}', # yellow
+	 '{{ .WezTerm.Blue | index .Colors }}', # blue
+	 '{{ .WezTerm.Purple | index .Colors }}', # purple
+	 '{{ .WezTerm.Cyan | index .Colors }}', # cyan
+	 '{{ .WezTerm.White | index .Colors }}', # white
+]
+brights = [
+	 '{{ .WezTerm.BrightBlack | index .Colors }}', # black
+	 '{{ .WezTerm.BrightRed | index .Colors }}', # red
+	 '{{ .WezTerm.BrightGreen | index .Colors }}', # green
+	 '{{ .WezTerm.BrightYellow | index .Colors }}', # yellow
+	 '{{ .WezTerm.BrightBlue | index .Colors }}', # blue
+	 '{{ .WezTerm.BrightPurple | index .Colors }}', # purple
+	 '{{ .WezTerm.BrightCyan | index .Colors }}', # cyan
+	 '{{ .WezTerm.BrightWhite | index .Colors }}', # white
+]
+
+background = '{{ .WezTerm.Background | index .Colors }}'
+foreground = '{{ .WezTerm.Foreground | index .Colors }}'
+
+cursor_bg = '{{ .WezTerm.CursorBG | index .Colors }}'
+cursor_border  = '{{ .WezTerm.CursorBorder | index .Colors }}'
+cursor_fg = '{{ .WezTerm.CursorFG | index .Colors }}'
+
+selection_bg = '{{ .WezTerm.SelectionBG | index .Colors }}'
+selection_fg = '{{ .WezTerm.SelectionFG | index .Colors }}'
+
+[colors.indexed]
+
+[metadata]
+name = '{{ .Metadata.Name }}' 

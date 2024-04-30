@@ -2,7 +2,7 @@ local colors = {
 	normal  = '#90b0ff',
 	insert  = '#49a078',
 	visual  = '#49416d',
-	replace = '#7d5c65',
+	replace = '#9d5060',
 	command = '#d99058',
 
 	fg      = '#bec4de',

@@ -1,0 +1,36 @@
+[colors]
+ansi = [
+	 '#404f59', # black
+	 '#9d5060', # red
+	 '#49a078', # green
+	 '#d99058', # yellow
+	 '#90b0ff', # blue
+	 '#736b92', # purple
+	 '#a1cca5', # cyan
+	 '#e5dada', # white
+]
+brights = [
+	 '#8c92ac', # black
+	 '#b16474', # red
+	 '#5db48c', # green
+	 '#d7ba89', # yellow
+	 '#9abaff', # blue
+	 '#bf79bf', # purple
+	 '#a1cca5', # cyan
+	 '#e5dada', # white
+]
+
+background = '#030027'
+foreground = '#bec4de'
+
+cursor_bg = '#bf79bf'
+cursor_border  = '#bf79bf'
+cursor_fg = '#030027'
+
+selection_bg = '#9abaff'
+selection_fg = '#030027'
+
+[colors.indexed]
+
+[metadata]
+name = 'deep_purple' 

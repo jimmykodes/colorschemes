@@ -104,6 +104,14 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 		return err
 	}
 
+	weztermDir := "wezterm"
+	if err := os.MkdirAll(weztermDir, 0766); err != nil && !os.IsExist(err) {
+		return err
+	}
+	if err := templates.WezTerm(weztermDir, scheme); err != nil {
+		return err
+	}
+
 	htmlDir := "html"
 	if err := os.MkdirAll(htmlDir, 0766); err != nil && !os.IsExist(err) {
 		return err

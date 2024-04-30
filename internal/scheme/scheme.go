@@ -22,6 +22,31 @@ type Scheme struct {
 		Bg      string `yaml:"bg"`
 		BgAlt   string `yaml:"bg_alt"`
 	} `yaml:"lualine"`
+	WezTerm struct {
+		Foreground   string `yaml:"fg"`
+		Background   string `yaml:"bg"`
+		CursorFG     string `yaml:"cursor_fg"`
+		CursorBG     string `yaml:"cursor_bg"`
+		CursorBorder string `yaml:"cursor_border"`
+		SelectionBG  string `yaml:"selection_bg"`
+		SelectionFG  string `yaml:"selection_fg"`
+		Black        string `yaml:"black"`
+		Red          string `yaml:"red"`
+		Green        string `yaml:"green"`
+		Yellow       string `yaml:"yellow"`
+		Blue         string `yaml:"blue"`
+		Purple       string `yaml:"purple"`
+		Cyan         string `yaml:"cyan"`
+		White        string `yaml:"white"`
+		BrightBlack  string `yaml:"bright_black"`
+		BrightRed    string `yaml:"bright_red"`
+		BrightGreen  string `yaml:"bright_green"`
+		BrightYellow string `yaml:"bright_yellow"`
+		BrightBlue   string `yaml:"bright_blue"`
+		BrightPurple string `yaml:"bright_purple"`
+		BrightCyan   string `yaml:"bright_cyan"`
+		BrightWhite  string `yaml:"bright_white"`
+	}
 	Normal Highlight                       `yaml:"Normal"`
 	HTML   []string                        `yaml:"html"`
 	Colors map[string]*Color               `yaml:"colors"`

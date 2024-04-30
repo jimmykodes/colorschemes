@@ -1,0 +1,36 @@
+[colors]
+ansi = [
+	 '#3e3e3e', # black
+	 '#f15d22', # red
+	 '#7ec589', # green
+	 '#D7BA7D', # yellow
+	 '#18a9c7', # blue
+	 '#ad7fa8', # purple
+	 '#7ec589', # cyan
+	 '#D8DEE9', # white
+]
+brights = [
+	 '#98918d', # black
+	 '#D16969', # red
+	 '#7ec589', # green
+	 '#eece61', # yellow
+	 '#81c8d6', # blue
+	 '#D16D9E', # purple
+	 '#7ec589', # cyan
+	 '#D8DEE9', # white
+]
+
+background = '#222222'
+foreground = '#cccccc'
+
+cursor_bg = '#7ec589'
+cursor_border  = '#7ec589'
+cursor_fg = '#222222'
+
+selection_bg = '#264F78'
+selection_fg = '#222222'
+
+[colors.indexed]
+
+[metadata]
+name = 'system76' 
