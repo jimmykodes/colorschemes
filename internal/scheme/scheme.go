@@ -47,6 +47,19 @@ type Scheme struct {
 		BrightCyan   string `yaml:"bright_cyan"`
 		BrightWhite  string `yaml:"bright_white"`
 	}
+	K9s struct {
+		FG           string `yaml:"fg"`
+		BG           string `yaml:"bg"`
+		Black        string `yaml:"black"`
+		Blue         string `yaml:"blue"`
+		Green        string `yaml:"green"`
+		Gray         string `yaml:"gray"`
+		Orange       string `yaml:"orange"`
+		Purple       string `yaml:"purple"`
+		Red          string `yaml:"red"`
+		Yellow       string `yaml:"yellow"`
+		BrightYellow string `yaml:"brightYellow"`
+	}
 	Normal Highlight                       `yaml:"Normal"`
 	HTML   []string                        `yaml:"html"`
 	Colors map[string]*Color               `yaml:"colors"`

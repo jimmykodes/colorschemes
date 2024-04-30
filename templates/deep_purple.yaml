@@ -95,6 +95,19 @@ wezterm:
   bright_cyan: cyan
   bright_white: white
 
+k9s:
+  fg: fg
+  bg: bg
+  black: black
+  blue: blue
+  green: green
+  gray: gray
+  orange: orange
+  purple: magenta
+  red: red
+  yellow: info_yellow
+  brightYellow: yellow
+
 lualine:
   normal: blue
   insert: green

@@ -52,6 +52,15 @@ func (t *Tmpl) WezTerm(weztermDir string, scheme scheme.Scheme) error {
 	return t.tmpl.ExecuteTemplate(f, "wezterm.gotmpl", scheme)
 }
 
+func (t *Tmpl) K9s(dir string, scheme scheme.Scheme) error {
+	f, err := os.Create(filepath.Join(dir, scheme.Metadata.Name+".yaml"))
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	return t.tmpl.ExecuteTemplate(f, "k9s.gotmpl", scheme)
+}
+
 func (t *Tmpl) Vim(colorDir string, scheme scheme.Scheme) error {
 	f, err := os.Create(filepath.Join(colorDir, scheme.Metadata.Name+".vim"))
 	if err != nil {

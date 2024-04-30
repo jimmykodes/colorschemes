@@ -104,7 +104,7 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 		return err
 	}
 
-	weztermDir := "wezterm"
+	weztermDir := filepath.Join("configs", "wezterm")
 	if err := os.MkdirAll(weztermDir, 0766); err != nil && !os.IsExist(err) {
 		return err
 	}
@@ -112,7 +112,15 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 		return err
 	}
 
-	htmlDir := "html"
+	k9sDir := filepath.Join("configs", "k9s")
+	if err := os.MkdirAll(k9sDir, 0766); err != nil && !os.IsExist(err) {
+		return err
+	}
+	if err := templates.K9s(k9sDir, scheme); err != nil {
+		return err
+	}
+
+	htmlDir := filepath.Join("examples", "html")
 	if err := os.MkdirAll(htmlDir, 0766); err != nil && !os.IsExist(err) {
 		return err
 	}
