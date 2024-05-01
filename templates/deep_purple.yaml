@@ -7,7 +7,7 @@ colors:
   light_gray: "lighten gray 50"
   gray: "#8c92ac"
   _gray: "#36454f"
-  dark_gray: "lighten _gray 10"
+  dark_gray: "lighten _gray 50"
 
   yellow: "#d7ba89"
   info_yellow: "darken yellow 10"
