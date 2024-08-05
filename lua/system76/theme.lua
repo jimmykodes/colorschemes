@@ -10,11 +10,6 @@ function M.setup()
 	hl(0, "DashboardFooter", { fg = c.cyan,  })
 	hl(0, "DashboardHeader", { fg = c.light_blue,  })
 
-	-- bufferline
-	hl(0, "BufferLineFill", { fg = c.light_gray, bg = c.black,  })
-	hl(0, "BufferLineSeparator", { fg = c.black, bg = c.black,  })
-	hl(0, "BufferLineSeparatorSelected", { fg = c.black, bg = c.bg,  })
-
 	-- cursor
 	hl(0, "Cursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
 	hl(0, "CursorColumn", { bg = c.dark,  })
@@ -144,6 +139,7 @@ function M.setup()
 
 	-- misc
 	hl(0, "CompeDocumentation", { bg = c.alt_bg,  })
+	hl(0, "IlluminatedWordText", { bg = c.highlight_alt_bg,  })
 	hl(0, "IndentBlanklineChar", { fg = c.dark_gray,  })
 	hl(0, "IndentBlanklineContextChar", { fg = c.context,  })
 	hl(0, "IndentBlanklineSpaceChar", { fg = c.cyan_test,  })
@@ -263,14 +259,6 @@ function M.setup()
 	hl(0, "Type", { fg = c.blue,  })
 	hl(0, "Typedef", { fg = c.blue,  })
 	hl(0, "Variable", { fg = c.light_blue,  })
-
-	-- whichkey
-	hl(0, "WhichKey", { fg = c.purple,  })
-	hl(0, "WhichKeyDesc", { fg = c.light_blue,  })
-	hl(0, "WhichKeyFloat", { bg = c.black,  })
-	hl(0, "WhichKeyGroup", { fg = c.blue,  })
-	hl(0, "WhichKeySeparator", { fg = c.green,  })
-	hl(0, "whichKeyBorder", { fg = c.fg, bg = c.black,  })
 
 end
 

@@ -6,6 +6,7 @@ colors:
   fg: '#cccccc'
   bg: '#222222'
   alt_bg: '#282828'
+  highlight_alt_bg: 'lighten alt_bg 30'
   cursor_fg: '#515052'
   cursor_bg: '#AEAFAD'
   dark: '#242424'
@@ -212,28 +213,6 @@ groups:
     TabLineSel: 'white alt_bg'
     TabLineFill: 'white alt_bg'
 
-  bufferline:
-    BufferLineFill: 'light_gray black'
-    BufferLineSeparator: 'black black'
-    BufferLineSeparatorSelected: 'black bg'
-
-    # BufferCurrentIndex: 'fg bg'
-    # BufferCurrentMod: 'info_yellow bg'
-    # BufferCurrentSign: 'hint_blue bg'
-    # BufferCurrentTarget: 'yellow bg b'
-    #
-    # BufferVisible: 'fg black'
-    # BufferVisibleIndex: 'fg bg'
-    # BufferVisibleMod: 'info_yellow bg'
-    # BufferVisibleSign: 'gray bg'
-    # BufferVisibleTarget: 'red bg b'
-    #
-    # BufferInactive: 'gray purple'
-    # BufferInactiveIndex: 'gray alt_bg'
-    # BufferInactiveMod: 'info_yellow alt_bg'
-    # BufferInactiveSign: 'gray alt_bg'
-    # BufferInactiveTarget: 'red alt_bg b'
-
   treesitter:
     TSComment: 'comment'
     TSAnnotation: 'yellow'
@@ -290,14 +269,6 @@ groups:
     TSQueryLinterError: 'warning_orange'
     TSInstalled: 'green black'
     TSMissing: 'error_red black'
-
-  whichkey:
-    WhichKey: 'purple'
-    WhichKeySeparator: 'green'
-    WhichKeyGroup: 'blue'
-    WhichKeyDesc: 'light_blue'
-    WhichKeyFloat: '- black'
-    whichKeyBorder: 'fg black'
 
   git:
     SignAdd: 'sign_add'
@@ -380,18 +351,13 @@ groups:
     NvimTreeRootFolder: 'fg - b'
     NvimTreeExecFile: 'green'
 
-  # lir:
-  #   LirFloatNormal: "light_gray alt_bg"
-  #   LirDir: "blue"
-  #   LirSymLink: "cyan"
-  #   LirEmptyDirText: "blue"
-
   alpha:
     DashboardHeader: 'light_blue'
     DashboardCenter: 'purple'
     DashboardFooter: 'cyan'
 
   misc:
+    IlluminatedWordText: '- highlight_alt_bg'
     xmlTag: 'cyan'
     xmlTagName: 'cyan'
     xmlEndTag: 'cyan'
