@@ -356,8 +356,13 @@ groups:
     DashboardCenter: 'purple'
     DashboardFooter: 'cyan'
 
-  misc:
+  illuminate:
     IlluminatedWordText: '- highlight_alt_bg'
+    IlluminatedWordRead: '- highlight_alt_bg'
+    IlluminatedWordWrite: '- highlight_alt_bg'
+
+
+  misc:
     xmlTag: 'cyan'
     xmlTagName: 'cyan'
     xmlEndTag: 'cyan'

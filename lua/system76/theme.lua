@@ -104,6 +104,11 @@ function M.setup()
 	hl(0, "Whitespace", { fg = c.bg,  })
 	hl(0, "WildMenu", { fg = c.alt_bg, bg = c.blue,  })
 
+	-- illuminate
+	hl(0, "IlluminatedWordRead", { bg = c.highlight_alt_bg,  })
+	hl(0, "IlluminatedWordText", { bg = c.highlight_alt_bg,  })
+	hl(0, "IlluminatedWordWrite", { bg = c.highlight_alt_bg,  })
+
 	-- lsp
 	hl(0, "LspDiagnosticsDefaultError", { fg = c.error_red,  })
 	hl(0, "LspDiagnosticsDefaultHint", { fg = c.hint_blue,  })
@@ -139,7 +144,6 @@ function M.setup()
 
 	-- misc
 	hl(0, "CompeDocumentation", { bg = c.alt_bg,  })
-	hl(0, "IlluminatedWordText", { bg = c.highlight_alt_bg,  })
 	hl(0, "IndentBlanklineChar", { fg = c.dark_gray,  })
 	hl(0, "IndentBlanklineContextChar", { fg = c.context,  })
 	hl(0, "IndentBlanklineSpaceChar", { fg = c.cyan_test,  })
