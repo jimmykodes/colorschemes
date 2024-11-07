@@ -1,0 +1,402 @@
+metadata:
+  name: pokemon
+  theme: dark
+
+colors:
+  white: "#FFFFFF"
+  green: "#9ee865"
+  cyan: "#66d8f6"
+  blue: "#899eea"
+  gray: "#9fa19f"
+  dark_gray: "#624d4e"
+  yellow: "#f5de69"
+  orange: "#f09a65"
+  magenta: "#e46cca"
+  red: "#ef7374"
+  purple: "#9141cb"
+  bg: "#232d36"
+  fg: "#d1e5d9"
+
+  light_gray: "lighten gray 50"
+  info_yellow: "darken yellow 10"
+  yellow_orange: "ref orange"
+  light_red: "lighten red 20"
+  light_green: "lighten green 20"
+  light_blue: "lighten blue 10"
+  hint_blue: "darken blue 10"
+  ui_blue: "ref light_blue"
+  accent: 'ref light_gray'
+  warning_orange: "ref orange"
+  purple_test: "ref purple"
+  search_blue: "ref hint_blue"
+  search_orange: "ref info_yellow"
+  light_purple: "lighten purple 20"
+
+
+  alt_bg: "lighten bg 20"
+  black: "darken bg 10"
+
+  comment: "ref dark_gray"
+  context: "ref dark_gray"
+
+  cursor_fg: 'ref bg'
+  cursor_bg: 'ref fg'
+
+  error_red: 'ref red'
+
+  sign_add: 'ref green'
+  sign_change: 'ref blue'
+  sign_delete: 'ref orange'
+
+html:
+  - bg
+  - fg
+  - white
+  - gray
+  - black
+  - red
+  - magenta
+  - purple
+  - blue
+  - cyan
+  - green
+  - yellow
+  - orange
+
+wezterm:
+  fg: fg
+  bg: bg
+  cursor_fg: bg
+  cursor_bg: magenta
+  cursor_border: magenta
+  selection_bg: light_blue
+  selection_fg: bg
+  black: dark_gray
+  red: red
+  green: green
+  yellow: orange
+  blue: blue
+  purple: light_purple
+  cyan: cyan
+  white: white
+  bright_black: gray
+  bright_red: light_red
+  bright_green: light_green
+  bright_yellow: yellow
+  bright_blue: light_blue
+  bright_purple: magenta
+  bright_cyan: cyan
+  bright_white: white
+
+k9s:
+  fg: fg
+  bg: bg
+  black: black
+  blue: blue
+  green: green
+  gray: gray
+  orange: orange
+  purple: magenta
+  red: red
+  yellow: info_yellow
+  brightYellow: yellow
+
+lualine:
+  normal: blue
+  insert: green
+  visual: purple
+  replace: red
+  command: orange
+  fg: fg
+  bg: bg
+  bg_alt: black
+
+Normal: 'fg bg'
+
+groups:
+  cursor:
+    Cursor: 'cursor_fg cursor_bg'
+    lCursor: 'cursor_fg cursor_bg'
+    CursorIM: 'cursor_fg cursor_bg'
+    TermCursor: 'cursor_fg cursor_bg'
+    TermCursorNC: 'cursor_fg cursor_bg'
+    CursorLineNr: 'light_gray - b'
+    CursorLine: '- black'
+    CursorColumn: '- black'
+
+  types:
+    Operator: 'white'
+    SpecialChar: 'white'
+
+    Character: 'orange'
+
+    Function: 'yellow'
+
+    String: 'green'
+    Number: 'green'
+    Float: 'green'
+
+    Variable: 'gray'
+    Identifier: 'gray'
+
+    Constant: 'magenta'
+    Boolean: 'magenta'
+    Type: 'magenta'
+    StorageClass: 'magenta'
+    Structure: 'magenta'
+    Typedef: 'magenta'
+    Tag: 'magenta'
+
+    Keyword: 'blue'
+    Statement: 'blue'
+    Repeat: 'blue'
+    Label: 'blue'
+    Include: 'blue'
+    Conditional: 'blue'
+
+    Special: 'cyan'
+    Exception: 'cyan'
+    PreProc: 'cyan'
+    Define: 'cyan'
+    Macro: 'cyan'
+    PreCondit: 'cyan'
+
+
+  diff:
+    DiffAdd: 'alt_bg sign_add'
+    DiffChange: 'alt_bg sign_change u'
+    DiffDelete: 'alt_bg sign_delete'
+
+  highlights:
+    MatchWord: 'blue alt_bg'
+    MatchParen: 'hint_blue bg u'
+    MatchWordCur: '- - u'
+    MatchParenCur: '- - u'
+    SignColumn: '- bg'
+    MsgArea: 'fg bg'
+    ModeMsg: 'fg bg'
+    MsgSeparator: 'fg bg'
+    SpellBad: 'error_red - u'
+    SpellCap: 'yellow - u'
+    SpellLocal: 'green - u'
+    SpellRare: 'purple - u'
+    NormalNC: 'fg bg'
+    Pmenu: 'light_gray alt_bg'
+    PmenuSel: 'alt_bg blue'
+    WildMenu: 'alt_bg blue'
+    Comment: 'comment - i'
+    Folded: 'accent alt_bg'
+    FoldColumn: 'accent alt_bg'
+    LineNr: 'gray -'
+    FloatBorder: 'gray alt_bg'
+    Whitespace: 'bg -'
+    VertSplit: 'fg bg'
+    ColorColumn: '- black'
+    NormalFloat: '- black'
+    Visual: 'alt_bg ui_blue'
+    VisualNOS: '- alt_bg'
+    WarningMsg: 'error_red bg'
+    QuickFixLine: '- black'
+    PmenuSbar: '- alt_bg'
+    PmenuThumb: '- gray'
+    Conceal: 'accent'
+    Directory: 'blue'
+    SpecialKey: 'blue - b'
+    Title: 'blue - b'
+    ErrorMsg: 'error_red bg b'
+    Search: 'alt_bg search_blue'
+    IncSearch: 'alt_bg search_blue'
+    Substitute: 'alt_bg search_orange'
+    MoreMsg: 'orange'
+    Question: 'orange'
+    EndOfBuffer: 'bg'
+    NonText: 'bg'
+    Debug: 'red'
+    Delimiter: 'gray -'
+    SpecialComment: 'comment'
+    Underlined: '- - u'
+    Bold: '- - b'
+    Italic: '- - i'
+    Ignore: 'cyan bg b'
+    Todo: 'purple bg b'
+    Error: 'error_red bg b'
+    TabLine: 'light_gray alt_bg'
+    TabLineSel: 'white alt_bg'
+    TabLineFill: 'white alt_bg'
+
+  bufferline:
+    BufferLineFill: 'light_gray black'
+    BufferLineSeparator: 'black black'
+    BufferLineSeparatorSelected: 'black bg'
+
+  treesitter:
+    TSComment: 'comment'
+    TSAnnotation: 'yellow'
+    TSAttribute: 'orange'
+    TSConstructor: 'orange'
+    TSType: 'orange'
+    TSTypeBuiltin: 'blue'
+    TSConditional: 'blue'
+    TSException: 'purple'
+    TSInclude: 'purple'
+    TSKeywordReturn: 'purple'
+    TSKeyword: 'blue'
+    TSKeywordFunction: 'blue'
+    TSLabel: 'light_blue'
+    TSNamespace: 'orange'
+    TSRepeat: 'purple'
+    TSConstant: 'yellow'
+    TSConstBuiltin: 'blue'
+    TSFloat: 'green'
+    TSNumber: 'green'
+    TSBoolean: 'blue'
+    TSCharacter: 'orange'
+    TSError: 'error_red'
+    TSFunction: 'yellow'
+    TSFuncBuiltin: 'yellow'
+    TSMethod: 'yellow'
+    TSConstMacro: 'orange'
+    TSFuncMacro: 'yellow'
+    TSVariable: 'light_blue'
+    TSVariableBuiltin: 'light_blue'
+    TSProperty: 'light_blue'
+    TSOperator: 'fg'
+    TSField: 'light_blue'
+    TSParameter: 'light_blue'
+    TSParameterReference: 'light_blue'
+    TSSymbol: 'light_blue'
+    TSText: 'fg'
+    TSPunctDelimiter: 'fg -'
+    TSTagDelimiter: 'gray'
+    TSPunctBracket: 'fg -'
+    TSPunctSpecial: 'fg'
+    TSString: 'cyan'
+    TSStringRegex: 'cyan'
+    TSStringEscape: 'green'
+    TSTag: 'blue'
+    TSEmphasis: '- - i'
+    TSUnderline: '- - u'
+    TSTitle: 'blue - b'
+    TSLiteral: 'yellow_orange'
+    TSURI: 'yellow_orange - u'
+    TSKeywordOperator: 'blue'
+    TSStructure: 'light_blue'
+    TSStrong: 'yellow_orange'
+    TSQueryLinterError: 'warning_orange'
+    TSInstalled: 'green black'
+    TSMissing: 'error_red black'
+
+  whichkey:
+    WhichKey: 'purple'
+    WhichKeySeparator: 'green'
+    WhichKeyGroup: 'blue'
+    WhichKeyDesc: 'light_blue'
+    WhichKeyFloat: '- black'
+    whichKeyBorder: 'fg black'
+
+  git:
+    SignAdd: 'sign_add'
+    SignChange: 'sign_change'
+    SignDelete: 'sign_delete'
+    GitSignsAdd: 'sign_add'
+    GitSignsChange: 'sign_change'
+    GitSignsDelete: 'sign_delete'
+
+    DiffViewNormal: 'gray alt_bg'
+    DiffviewStatusAdded: 'sign_add'
+    DiffviewStatusModified: 'sign_change'
+    DiffviewStatusRenamed: 'sign_change'
+    DiffviewStatusDeleted: 'sign_delete'
+    DiffviewFilePanelInsertion: 'sign_add'
+    DiffviewFilePanelDeletion: 'sign_delete'
+    DiffviewVertSplit: '- bg'
+
+    diffAdded: 'sign_add'
+    diffRemoved: 'sign_delete'
+    diffFileId: 'blue - br'
+    diffFile: 'alt_bg'
+    diffNewFile: 'green'
+    diffOldFile: 'red'
+
+  lualine:
+    LuaLineDiffAdd: 'sign_add'
+    LuaLineDiffChange: 'sign_change'
+    LuaLineDiffDelete: 'sign_delete'
+
+  lsp:
+    LspDiagnosticsDefaultError: 'error_red'
+    LspDiagnosticsDefaultWarning: 'warning_orange'
+    LspDiagnosticsDefaultInformation: 'info_yellow'
+    LspDiagnosticsDefaultHint: 'hint_blue'
+    LspDiagnosticsVirtualTextError: 'error_red'
+    LspDiagnosticsVirtualTextWarning: 'warning_orange'
+    LspDiagnosticsVirtualTextInformation: 'info_yellow'
+    LspDiagnosticsVirtualTextHint: 'hint_blue'
+    LspDiagnosticsFloatingError: 'error_red'
+    LspDiagnosticsFloatingWarning: 'warning_orange'
+    LspDiagnosticsFloatingInformation: 'info_yellow'
+    LspDiagnosticsFloatingHint: 'hint_blue'
+    LspDiagnosticsSignError: 'error_red'
+    LspDiagnosticsSignWarning: 'warning_orange'
+    LspDiagnosticsSignInformation: 'info_yellow'
+    LspDiagnosticsSignHint: 'hint_blue'
+    LspDiagnosticsError: 'error_red'
+    LspDiagnosticsWarning: 'warning_orange'
+    LspDiagnosticsInformation: 'info_yellow'
+    LspDiagnosticsHint: 'hint_blue'
+    LspDiagnosticsUnderlineError: '- - u'
+    LspDiagnosticsUnderlineWarning: '- - u'
+    LspDiagnosticsUnderlineInformation: '- - u'
+    LspDiagnosticsUnderlineHint: '- - u'
+
+    QuickScopePrimary: 'purple_test - u'
+    QuickScopeSecondary: 'cyan - u'
+
+  telescope:
+    TelescopeSelection: 'hint_blue'
+    TelescopeMatching: 'info_yellow - b'
+
+  nvim_tree:
+    NvimTreeFolderIcon: 'blue'
+    NvimTreeIndentMarker: 'gray'
+    NvimTreeNormal: 'light_gray alt_bg'
+    NvimTreeVertSplit: 'alt_bg alt_bg'
+    NvimTreeFolderName: 'blue'
+    NvimTreeOpenedFolderName: 'cyan - i'
+    NvimTreeImageFile: 'purple'
+    NvimTreeSpecialFile: 'orange'
+    NvimTreeGitStaged: 'sign_add'
+    NvimTreeGitNew: 'sign_add'
+    NvimTreeGitDirty: 'sign_add'
+    NvimTreeGitDeleted: 'sign_delete'
+    NvimTreeGitMerge: 'sign_change'
+    NvimTreeGitRenamed: 'sign_change'
+    NvimTreeSymlink: 'cyan'
+    NvimTreeRootFolder: 'fg - b'
+    NvimTreeExecFile: 'green'
+
+  # lir:
+  #   LirFloatNormal: "light_gray alt_bg"
+  #   LirDir: "blue"
+  #   LirSymLink: "cyan"
+  #   LirEmptyDirText: "blue"
+
+  alpha:
+    DashboardHeader: 'light_blue'
+    DashboardCenter: 'purple'
+    DashboardFooter: 'cyan'
+
+  misc:
+    xmlTag: 'cyan'
+    xmlTagName: 'cyan'
+    xmlEndTag: 'cyan'
+
+    CompeDocumentation: '- alt_bg'
+
+    debugPc: '- cyan'
+    debugBreakpoint: 'red - r'
+
+    IndentBlanklineContextChar: 'context'
+    IndentBlanklineChar: 'dark_gray'
+    IndentBlanklineSpaceChar: 'cyan'
+    IndentBlanklineSpaceCharBlankline: 'info_yellow'

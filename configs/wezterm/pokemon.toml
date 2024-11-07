@@ -1,0 +1,36 @@
+[colors]
+ansi = [
+	 '#624d4e', # black
+	 '#ef7374', # red
+	 '#9ee865', # green
+	 '#f09a65', # yellow
+	 '#899eea', # blue
+	 '#a555df', # purple
+	 '#66d8f6', # cyan
+	 '#FFFFFF', # white
+]
+brights = [
+	 '#9fa19f', # black
+	 '#ff8788', # red
+	 '#b2fc79', # green
+	 '#f5de69', # yellow
+	 '#93a8f4', # blue
+	 '#e46cca', # purple
+	 '#66d8f6', # cyan
+	 '#FFFFFF', # white
+]
+
+background = '#232d36'
+foreground = '#d1e5d9'
+
+cursor_bg = '#e46cca'
+cursor_border  = '#e46cca'
+cursor_fg = '#232d36'
+
+selection_bg = '#93a8f4'
+selection_fg = '#232d36'
+
+[colors.indexed]
+
+[metadata]
+name = 'pokemon' 
