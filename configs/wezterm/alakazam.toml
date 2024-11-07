@@ -1,0 +1,36 @@
+[colors]
+ansi = [
+	 '#6d5d6d', # black
+	 '#cb5340', # red
+	 '#9ee865', # green
+	 '#a69045', # yellow
+	 '#899eea', # blue
+	 '#b27f9c', # purple
+	 '#66d8f6', # cyan
+	 '#f5f0aa', # white
+]
+brights = [
+	 '#c9c9bf', # black
+	 '#df6754', # red
+	 '#b2fc79', # green
+	 '#ecd646', # yellow
+	 '#93a8f4', # blue
+	 '#ca74d0', # purple
+	 '#66d8f6', # cyan
+	 '#f5f0aa', # white
+]
+
+background = '#210e1f'
+foreground = '#f2f3f1'
+
+cursor_bg = '#ca74d0'
+cursor_border  = '#ca74d0'
+cursor_fg = '#210e1f'
+
+selection_bg = '#93a8f4'
+selection_fg = '#210e1f'
+
+[colors.indexed]
+
+[metadata]
+name = 'alakazam' 
