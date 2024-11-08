@@ -1,7 +1,7 @@
 # pokemon
 foreground: &foreground "#d1e5d9"
 background: &background "#232d36"
-black: &black "#0f1922"
+black: &black "#19232c"
 blue: &blue "#899eea"
 green: &green "#9ee865"
 gray: &gray "#9fa19f"

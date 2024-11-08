@@ -17,7 +17,7 @@ function M.setup()
 
 	-- cursor
 	hl(0, "Cursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "CursorLine", { bg = c.alt_bg,  })
+	hl(0, "CursorLine", { bg = c.cursor_line,  })
 
 	-- diff
 	hl(0, "DiffAdd", { fg = c.alt_bg, bg = c.sign_add,  })
@@ -102,6 +102,11 @@ function M.setup()
 	hl(0, "WarningMsg", { fg = c.error_red, bg = c.bg,  })
 	hl(0, "Whitespace", { fg = c.bg,  })
 	hl(0, "WildMenu", { fg = c.alt_bg, bg = c.blue,  })
+
+	-- illuminate
+	hl(0, "IlluminatedWordRead", { bg = c.highlight_alt_bg,  })
+	hl(0, "IlluminatedWordText", { bg = c.highlight_alt_bg,  })
+	hl(0, "IlluminatedWordWrite", { bg = c.highlight_alt_bg,  })
 
 	-- lsp
 	hl(0, "LspDiagnosticsDefaultError", { fg = c.error_red,  })
@@ -257,14 +262,6 @@ function M.setup()
 	hl(0, "Type", { fg = c.magenta,  })
 	hl(0, "Typedef", { fg = c.magenta,  })
 	hl(0, "Variable", { fg = c.gray,  })
-
-	-- whichkey
-	hl(0, "WhichKey", { fg = c.purple,  })
-	hl(0, "WhichKeyDesc", { fg = c.light_blue,  })
-	hl(0, "WhichKeyFloat", { bg = c.black,  })
-	hl(0, "WhichKeyGroup", { fg = c.blue,  })
-	hl(0, "WhichKeySeparator", { fg = c.green,  })
-	hl(0, "whichKeyBorder", { fg = c.fg, bg = c.black,  })
 
 end
 

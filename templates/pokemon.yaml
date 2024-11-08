@@ -32,15 +32,16 @@ colors:
   search_orange: "ref info_yellow"
   light_purple: "lighten purple 20"
 
-
-  alt_bg: "darken bg 10"
-  black: "darken bg 20"
+  alt_bg: "lighten bg 5"
+  highlight_alt_bg: 'lighten alt_bg 5'
+  black: "darken bg 10"
 
   comment: "ref gray"
   context: "ref gray"
 
   cursor_fg: 'ref bg'
   cursor_bg: 'ref fg'
+  cursor_line: 'darken bg 5'
 
   error_red: 'ref red'
 
@@ -116,7 +117,7 @@ Normal: 'fg bg'
 groups:
   cursor:
     Cursor: 'cursor_fg cursor_bg'
-    CursorLine: '- alt_bg'
+    CursorLine: '- cursor_line'
 
   types:
     Operator: 'white'
@@ -280,14 +281,6 @@ groups:
     TSInstalled: 'green black'
     TSMissing: 'error_red black'
 
-  whichkey:
-    WhichKey: 'purple'
-    WhichKeySeparator: 'green'
-    WhichKeyGroup: 'blue'
-    WhichKeyDesc: 'light_blue'
-    WhichKeyFloat: '- black'
-    whichKeyBorder: 'fg black'
-
   git:
     SignAdd: 'sign_add'
     SignChange: 'sign_change'
@@ -368,6 +361,11 @@ groups:
     NvimTreeSymlink: 'cyan'
     NvimTreeRootFolder: 'fg - b'
     NvimTreeExecFile: 'green'
+
+  illuminate:
+    IlluminatedWordText: '- highlight_alt_bg'
+    IlluminatedWordRead: '- highlight_alt_bg'
+    IlluminatedWordWrite: '- highlight_alt_bg'
 
   # lir:
   #   LirFloatNormal: "light_gray alt_bg"
