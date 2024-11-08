@@ -1,6 +1,6 @@
 [colors]
 ansi = [
-	 '#00001d', # black
+	 '#687781', # black
 	 '#9d5060', # red
 	 '#49a078', # green
 	 '#d7ba89', # yellow
@@ -10,7 +10,7 @@ ansi = [
 	 '#bec4de', # white
 ]
 brights = [
-	 '#687781', # black
+	 '<nil>', # black
 	 '#b16474', # red
 	 '#5db48c', # green
 	 '<nil>', # yellow

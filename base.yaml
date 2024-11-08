@@ -21,7 +21,7 @@ wezterm:
   cursor_border: cursor_bg
   selection_bg: selection_bg
   selection_fg: selection_fg
-  black: black
+  black: dark_gray
   red: red
   green: green
   yellow: yellow
@@ -29,7 +29,7 @@ wezterm:
   purple: purple
   cyan: cyan
   white: light_gray
-  bright_black: dark_gray
+  bright_black: grey
   bright_red: light_red
   bright_green: light_green
   bright_yellow: light_yellow
