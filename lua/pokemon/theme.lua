@@ -17,13 +17,7 @@ function M.setup()
 
 	-- cursor
 	hl(0, "Cursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "CursorColumn", { bg = c.black,  })
-	hl(0, "CursorIM", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "CursorLine", { bg = c.black,  })
-	hl(0, "CursorLineNr", { fg = c.light_gray, bold = true,  })
-	hl(0, "TermCursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "TermCursorNC", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "lCursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
+	hl(0, "CursorLine", { bg = c.alt_bg,  })
 
 	-- diff
 	hl(0, "DiffAdd", { fg = c.alt_bg, bg = c.sign_add,  })

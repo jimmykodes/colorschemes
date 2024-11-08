@@ -116,13 +116,7 @@ Normal: 'fg bg'
 groups:
   cursor:
     Cursor: 'cursor_fg cursor_bg'
-    lCursor: 'cursor_fg cursor_bg'
-    CursorIM: 'cursor_fg cursor_bg'
-    TermCursor: 'cursor_fg cursor_bg'
-    TermCursorNC: 'cursor_fg cursor_bg'
-    CursorLineNr: 'light_gray - b'
-    CursorLine: '- black'
-    CursorColumn: '- black'
+    CursorLine: '- alt_bg'
 
   types:
     Operator: 'white'
