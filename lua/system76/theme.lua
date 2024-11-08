@@ -12,13 +12,7 @@ function M.setup()
 
 	-- cursor
 	hl(0, "Cursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "CursorColumn", { bg = c.dark,  })
-	hl(0, "CursorIM", { fg = c.cursor_fg, bg = c.cursor_bg,  })
 	hl(0, "CursorLine", { bg = c.dark,  })
-	hl(0, "CursorLineNr", { fg = c.light_gray, bold = true,  })
-	hl(0, "TermCursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "TermCursorNC", { fg = c.cursor_fg, bg = c.cursor_bg,  })
-	hl(0, "lCursor", { fg = c.cursor_fg, bg = c.cursor_bg,  })
 
 	-- diff
 	hl(0, "DiffAdd", { fg = c.alt_bg, bg = c.sign_add,  })
@@ -141,18 +135,6 @@ function M.setup()
 	hl(0, "LuaLineDiffAdd", { fg = c.sign_add,  })
 	hl(0, "LuaLineDiffChange", { fg = c.sign_change,  })
 	hl(0, "LuaLineDiffDelete", { fg = c.sign_delete,  })
-
-	-- misc
-	hl(0, "CompeDocumentation", { bg = c.alt_bg,  })
-	hl(0, "IndentBlanklineChar", { fg = c.dark_gray,  })
-	hl(0, "IndentBlanklineContextChar", { fg = c.context,  })
-	hl(0, "IndentBlanklineSpaceChar", { fg = c.hint_blue,  })
-	hl(0, "IndentBlanklineSpaceCharBlankline", { fg = c.info_yellow,  })
-	hl(0, "debugBreakpoint", { fg = c.red,  })
-	hl(0, "debugPc", { bg = c.cyan,  })
-	hl(0, "xmlEndTag", { fg = c.cyan,  })
-	hl(0, "xmlTag", { fg = c.cyan,  })
-	hl(0, "xmlTagName", { fg = c.cyan,  })
 
 	-- nvim_tree
 	hl(0, "NvimTreeExecFile", { fg = c.green,  })

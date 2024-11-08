@@ -1,0 +1,309 @@
+html:
+  - bg
+  - fg
+  - white
+  - gray
+  - black
+  - red
+  - magenta
+  - purple
+  - blue
+  - cyan
+  - green
+  - yellow
+  - orange
+
+wezterm:
+  fg: fg
+  bg: bg
+  cursor_fg: cursor_fg
+  cursor_bg: cursor_bg
+  cursor_border: cursor_bg
+  selection_bg: selection_bg
+  selection_fg: selection_fg
+  black: black
+  red: red
+  green: green
+  yellow: yellow
+  blue: blue
+  purple: purple
+  cyan: cyan
+  white: light_gray
+  bright_black: dark_gray
+  bright_red: light_red
+  bright_green: light_green
+  bright_yellow: light_yellow
+  bright_blue: light_blue
+  bright_purple: magenta
+  bright_cyan: light_cyan
+  bright_white: white
+
+k9s:
+  fg: fg
+  bg: bg
+  black: black
+  blue: blue
+  green: green
+  gray: gray
+  orange: orange
+  purple: magenta
+  red: red
+  yellow: yellow
+  brightYellow: light_yellow
+
+lualine:
+  normal: blue
+  insert: green
+  visual: purple
+  replace: red
+  command: orange
+  fg: fg
+  bg: bg
+  bg_alt: black
+
+Normal: 'fg bg'
+
+groups:
+  cursor:
+    Cursor: 'cursor_fg cursor_bg'
+    CursorLine: '- dark'
+
+  types:
+    Variable: 'light_blue'
+    String: 'cyan'
+    Character: 'orange'
+    Constant: 'blue'
+    Number: 'green'
+    Boolean: 'blue'
+    Float: 'green'
+    Identifier: 'light_blue'
+    Function: 'yellow'
+    Operator: 'fg'
+    Type: 'blue'
+    StorageClass: 'blue'
+    Structure: 'blue'
+    Typedef: 'blue'
+    Keyword: 'purple'
+    Statement: 'purple'
+    Conditional: 'blue'
+    Repeat: 'purple'
+    Label: 'purple'
+    Exception: 'purple'
+    Include: 'purple'
+    PreProc: 'purple'
+    Define: 'purple'
+    Macro: 'purple'
+    PreCondit: 'purple'
+    Special: 'orange'
+    SpecialChar: 'white'
+    Tag: 'blue'
+
+  diff:
+    DiffAdd: 'alt_bg sign_add'
+    DiffChange: 'alt_bg sign_change u'
+    DiffDelete: 'alt_bg sign_delete'
+
+  highlights:
+    MatchWord: '- - u'
+    MatchParen: 'hint_blue bg u'
+    MatchWordCur: '- - u'
+    MatchParenCur: '- - u'
+    SignColumn: '- bg'
+    MsgArea: 'fg bg'
+    ModeMsg: 'fg bg'
+    MsgSeparator: 'fg bg'
+    SpellBad: 'error_red - u'
+    SpellCap: 'yellow - u'
+    SpellLocal: 'green - u'
+    SpellRare: 'purple - u'
+    NormalNC: 'fg bg'
+    Pmenu: 'light_gray'
+    PmenuSel: 'alt_bg blue'
+    PmenuSbar: '- dark'
+    PmenuThumb: '- gray'
+    WildMenu: 'alt_bg blue'
+    Comment: 'comment - i'
+    Folded: 'accent alt_bg'
+    FoldColumn: 'accent alt_bg'
+    LineNr: 'gray -'
+    FloatBorder: 'gray alt_bg'
+    Whitespace: 'bg -'
+    VertSplit: 'fg bg'
+    ColorColumn: '- dark'
+    NormalFloat: '- dark'
+    Visual: '- ui_blue'
+    VisualNOS: '- alt_bg'
+    WarningMsg: 'error_red bg'
+    QuickFixLine: '- black'
+    Conceal: 'accent'
+    Directory: 'blue'
+    SpecialKey: 'blue - b'
+    Title: 'blue - b'
+    ErrorMsg: 'error_red bg b'
+    Search: 'light_gray search_blue'
+    IncSearch: 'light_gray search_blue'
+    Substitute: 'light_gray search_orange'
+    MoreMsg: 'orange'
+    Question: 'orange'
+    EndOfBuffer: 'bg'
+    NonText: 'bg'
+    Debug: 'red'
+    Delimiter: 'gray -'
+    SpecialComment: 'comment'
+    Underlined: '- - u'
+    Bold: '- - b'
+    Italic: '- - i'
+    Ignore: 'cyan bg b'
+    Todo: 'purple bg b'
+    Error: 'error_red bg b'
+    TabLine: 'light_gray alt_bg'
+    TabLineSel: 'white alt_bg'
+    TabLineFill: 'white alt_bg'
+
+  treesitter:
+    TSComment: 'comment'
+    TSAnnotation: 'yellow'
+    TSAttribute: 'orange'
+    TSConstructor: 'orange'
+    TSType: 'orange'
+    TSTypeBuiltin: 'blue'
+    TSConditional: 'blue'
+    TSException: 'purple'
+    TSInclude: 'purple'
+    TSKeywordReturn: 'purple'
+    TSKeyword: 'blue'
+    TSKeywordFunction: 'blue'
+    TSLabel: 'light_blue'
+    TSNamespace: 'orange'
+    TSRepeat: 'purple'
+    TSConstant: 'yellow'
+    TSConstBuiltin: 'blue'
+    TSFloat: 'green'
+    TSNumber: 'green'
+    TSBoolean: 'blue'
+    TSCharacter: 'orange'
+    TSError: 'error_red'
+    TSFunction: 'yellow'
+    TSFuncBuiltin: 'yellow'
+    TSMethod: 'yellow'
+    TSConstMacro: 'orange'
+    TSFuncMacro: 'yellow'
+    TSVariable: 'light_blue'
+    TSVariableBuiltin: 'light_blue'
+    TSProperty: 'light_blue'
+    TSOperator: 'fg'
+    TSField: 'light_blue'
+    TSParameter: 'light_blue'
+    TSParameterReference: 'light_blue'
+    TSSymbol: 'light_blue'
+    TSText: 'fg'
+    TSPunctDelimiter: 'fg -'
+    TSTagDelimiter: 'gray'
+    TSPunctBracket: 'fg -'
+    TSPunctSpecial: 'fg'
+    TSString: 'cyan'
+    TSStringRegex: 'cyan'
+    TSStringEscape: 'green'
+    TSTag: 'blue'
+    TSEmphasis: '- - i'
+    TSUnderline: '- - u'
+    TSTitle: 'blue - b'
+    TSLiteral: 'yellow_orange'
+    TSURI: 'yellow_orange - u'
+    TSKeywordOperator: 'blue'
+    TSStructure: 'light_blue'
+    TSStrong: 'yellow_orange'
+    TSQueryLinterError: 'warning_orange'
+    TSInstalled: 'green black'
+    TSMissing: 'error_red black'
+
+  git:
+    SignAdd: 'sign_add'
+    SignChange: 'sign_change'
+    SignDelete: 'sign_delete'
+    GitSignsAdd: 'sign_add'
+    GitSignsChange: 'sign_change'
+    GitSignsDelete: 'sign_delete'
+
+    DiffViewNormal: 'gray alt_bg'
+    DiffviewStatusAdded: 'sign_add'
+    DiffviewStatusModified: 'sign_change'
+    DiffviewStatusRenamed: 'sign_change'
+    DiffviewStatusDeleted: 'sign_delete'
+    DiffviewFilePanelInsertion: 'sign_add'
+    DiffviewFilePanelDeletion: 'sign_delete'
+    DiffviewVertSplit: '- bg'
+
+    diffAdded: 'sign_add'
+    diffRemoved: 'sign_delete'
+    diffFileId: 'blue - br'
+    diffFile: 'alt_bg'
+    diffNewFile: 'green'
+    diffOldFile: 'red'
+
+  lualine:
+    LuaLineDiffAdd: 'sign_add'
+    LuaLineDiffChange: 'sign_change'
+    LuaLineDiffDelete: 'sign_delete'
+
+  lsp:
+    LspDiagnosticsDefaultError: 'error_red'
+    LspDiagnosticsDefaultWarning: 'warning_orange'
+    LspDiagnosticsDefaultInformation: 'info_yellow'
+    LspDiagnosticsDefaultHint: 'hint_blue'
+    LspDiagnosticsVirtualTextError: 'error_red'
+    LspDiagnosticsVirtualTextWarning: 'warning_orange'
+    LspDiagnosticsVirtualTextInformation: 'info_yellow'
+    LspDiagnosticsVirtualTextHint: 'hint_blue'
+    LspDiagnosticsFloatingError: 'error_red'
+    LspDiagnosticsFloatingWarning: 'warning_orange'
+    LspDiagnosticsFloatingInformation: 'info_yellow'
+    LspDiagnosticsFloatingHint: 'hint_blue'
+    LspDiagnosticsSignError: 'error_red'
+    LspDiagnosticsSignWarning: 'warning_orange'
+    LspDiagnosticsSignInformation: 'info_yellow'
+    LspDiagnosticsSignHint: 'hint_blue'
+    LspDiagnosticsError: 'error_red'
+    LspDiagnosticsWarning: 'warning_orange'
+    LspDiagnosticsInformation: 'info_yellow'
+    LspDiagnosticsHint: 'hint_blue'
+    LspDiagnosticsUnderlineError: '- - u'
+    LspDiagnosticsUnderlineWarning: '- - u'
+    LspDiagnosticsUnderlineInformation: '- - u'
+    LspDiagnosticsUnderlineHint: '- - u'
+
+    QuickScopePrimary: 'magenta - u'
+    QuickScopeSecondary: 'hint_blue - u'
+
+  telescope:
+    TelescopeSelection: 'hint_blue'
+    TelescopeMatching: 'info_yellow - b'
+
+  nvim_tree:
+    NvimTreeFolderIcon: 'blue'
+    NvimTreeIndentMarker: 'gray'
+    NvimTreeNormal: 'light_gray alt_bg'
+    NvimTreeVertSplit: 'alt_bg alt_bg'
+    NvimTreeFolderName: 'blue'
+    NvimTreeOpenedFolderName: 'cyan - i'
+    NvimTreeImageFile: 'purple'
+    NvimTreeSpecialFile: 'orange'
+    NvimTreeGitStaged: 'sign_add'
+    NvimTreeGitNew: 'sign_add'
+    NvimTreeGitDirty: 'sign_add'
+    NvimTreeGitDeleted: 'sign_delete'
+    NvimTreeGitMerge: 'sign_change'
+    NvimTreeGitRenamed: 'sign_change'
+    NvimTreeSymlink: 'cyan'
+    NvimTreeRootFolder: 'fg - b'
+    NvimTreeExecFile: 'green'
+
+  alpha:
+    DashboardHeader: 'light_blue'
+    DashboardCenter: 'purple'
+    DashboardFooter: 'cyan'
+
+  illuminate:
+    IlluminatedWordText: '- highlight_alt_bg'
+    IlluminatedWordRead: '- highlight_alt_bg'
+    IlluminatedWordWrite: '- highlight_alt_bg'

@@ -1,12 +1,9 @@
 package main
 
 import (
-	"errors"
-	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"github.com/jimmykodes/colorschemes/internal/scheme"
 	"github.com/jimmykodes/colorschemes/internal/tmpl"
@@ -14,74 +11,34 @@ import (
 )
 
 func main() {
-	scheme := flag.String("scheme", "", "generate a specific colorscheme")
-	flag.Parse()
-
-	if err := run(*scheme); err != nil {
+	if err := run(); err != nil {
 		os.Exit(1)
 	}
 }
 
-func run(scheme string) error {
-	schemes, err := loadSchemes(scheme)
+func run() error {
+	scheme, err := decodeScheme()
 	if err != nil {
+		fmt.Println("Error decoding scheme", "-", err)
 		return err
 	}
 
-	for _, scheme := range schemes {
-		fmt.Println("Processing", scheme.Name)
-		if schemeErr := genScheme(scheme); schemeErr != nil {
-			fmt.Println("Error processing", scheme.Name, "-", schemeErr)
-			err = errors.Join(err, schemeErr)
-		}
-	}
-	return err
-}
-
-type SchemeTemplate struct {
-	Name string
-	Ext  string
-}
-
-func loadSchemes(scheme string) ([]SchemeTemplate, error) {
-	entries, err := os.ReadDir("templates")
-	if err != nil {
-		return nil, err
-	}
-	out := make([]SchemeTemplate, 0, len(entries))
-	for _, entry := range entries {
-		name := entry.Name()
-		ext := filepath.Ext(name)
-		if ext != ".yaml" && ext != ".yml" {
-			continue
-		}
-		name = strings.TrimSuffix(name, ext)
-		if scheme == "" {
-			out = append(out, SchemeTemplate{Name: name, Ext: ext})
-			continue
-		}
-
-		if name == scheme {
-			return []SchemeTemplate{{Name: name, Ext: ext}}, nil
-		}
-	}
-	return out, nil
-}
-
-func genScheme(schemeTemplate SchemeTemplate) error {
-	fp := filepath.Join("templates", schemeTemplate.Name+schemeTemplate.Ext)
-	f, err := os.Open(fp)
-	if err != nil {
+	fmt.Println("processing", scheme.Metadata.Name)
+	if err := genScheme(scheme); err != nil {
+		fmt.Println("Error processing", scheme.Metadata.Name, "-", err)
 		return err
 	}
-	defer f.Close()
 
+	return nil
+}
+
+func decodeScheme() (scheme.Scheme, error) {
 	var scheme scheme.Scheme
-	if err := yaml.NewDecoder(f).Decode(&scheme); err != nil {
-		return err
-	}
+	err := yaml.NewDecoder(os.Stdin).Decode(&scheme)
+	return scheme, err
+}
 
-	// MARK: parsing
+func genScheme(scheme scheme.Scheme) error {
 	for _, color := range scheme.Colors {
 		_, err := color.Value(scheme.Colors)
 		if err != nil {
@@ -92,13 +49,14 @@ func genScheme(schemeTemplate SchemeTemplate) error {
 	for _, group := range scheme.Groups {
 		for name, hl := range group {
 			if _, ok := scheme.Colors[hl.FG]; hl.FG != "" && hl.FG != "-" && !ok {
-				fmt.Printf("%s: invalid fg color '%s' for name %s\n", schemeTemplate.Name, hl.FG, name)
+				fmt.Printf("%s: invalid fg color '%s' for name %s\n", scheme.Metadata.Name, hl.FG, name)
 			}
 			if _, ok := scheme.Colors[hl.BG]; hl.BG != "" && hl.BG != "-" && !ok {
-				fmt.Printf("%s: invalid bg color '%s' for name %s\n", schemeTemplate.Name, hl.BG, name)
+				fmt.Printf("%s: invalid bg color '%s' for name %s\n", scheme.Metadata.Name, hl.BG, name)
 			}
 		}
 	}
+
 	templates, err := tmpl.New()
 	if err != nil {
 		return err

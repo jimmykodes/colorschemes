@@ -8,8 +8,8 @@ gray: &gray "#c9c9bf"
 orange: &orange "#a69045"
 purple: &purple "#ca74d0"
 red: &red "#cb5340"
-yellow: &yellow "#e2cc3c"
-yellow_bright: &yellow_bright "#ecd646"
+yellow: &yellow "#ecd646"
+yellow_bright: &yellow_bright "<nil>"
 
 k9s:
   body:

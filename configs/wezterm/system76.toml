@@ -1,22 +1,22 @@
 [colors]
 ansi = [
-	 '#3e3e3e', # black
+	 '#1a1a1a', # black
 	 '#f15d22', # red
-	 '#7ec589', # green
-	 '#D7BA7D', # yellow
+	 '#6eaa76', # green
+	 '#eece61', # yellow
 	 '#18a9c7', # blue
 	 '#ad7fa8', # purple
 	 '#7ec589', # cyan
-	 '#D8DEE9', # white
+	 '#c8c9c1', # white
 ]
 brights = [
-	 '#98918d', # black
+	 '#3e3e3e', # black
 	 '#D16969', # red
-	 '#7ec589', # green
-	 '#eece61', # yellow
+	 '#B5CEA8', # green
+	 '#D7BA7D', # yellow
 	 '#81c8d6', # blue
 	 '#D16D9E', # purple
-	 '#7ec589', # cyan
+	 '#B5CEA8', # cyan
 	 '#D8DEE9', # white
 ]
 
