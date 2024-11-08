@@ -1,6 +1,6 @@
 [colors]
 ansi = [
-	 '#624d4e', # black
+	 '#0f1922', # black
 	 '#ef7374', # red
 	 '#9ee865', # green
 	 '#f09a65', # yellow
@@ -24,7 +24,7 @@ background = '#232d36'
 foreground = '#d1e5d9'
 
 cursor_bg = '#d1e5d9'
-cursor_border  = '#e46cca'
+cursor_border  = '#d1e5d9'
 cursor_fg = '#232d36'
 
 selection_bg = '#93a8f4'

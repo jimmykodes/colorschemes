@@ -1,9 +1,9 @@
 local M = {}
 
 M.accent = '#d1d3d1'
-M.alt_bg = '#37414a'
+M.alt_bg = '#19232c'
 M.bg = '#232d36'
-M.black = '#19232c'
+M.black = '#0f1922'
 M.blue = '#899eea'
 M.comment = '#624d4e'
 M.context = '#624d4e'

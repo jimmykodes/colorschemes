@@ -33,8 +33,8 @@ colors:
   light_purple: "lighten purple 20"
 
 
-  alt_bg: "lighten bg 20"
-  black: "darken bg 10"
+  alt_bg: "darken bg 10"
+  black: "darken bg 20"
 
   comment: "ref dark_gray"
   context: "ref dark_gray"
@@ -68,10 +68,10 @@ wezterm:
   bg: bg
   cursor_fg: cursor_fg
   cursor_bg: cursor_bg
-  cursor_border: magenta
+  cursor_border: cursor_bg
   selection_bg: light_blue
   selection_fg: bg
-  black: dark_gray
+  black: black
   red: red
   green: green
   yellow: orange
