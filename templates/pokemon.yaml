@@ -36,8 +36,8 @@ colors:
   alt_bg: "darken bg 10"
   black: "darken bg 20"
 
-  comment: "ref dark_gray"
-  context: "ref dark_gray"
+  comment: "ref gray"
+  context: "ref gray"
 
   cursor_fg: 'ref bg'
   cursor_bg: 'ref fg'
