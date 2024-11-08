@@ -10,7 +10,7 @@ ansi = [
 	 '#bec4de', # white
 ]
 brights = [
-	 '<nil>', # black
+	 '#8c92ac', # black
 	 '#b16474', # red
 	 '#5db48c', # green
 	 '<nil>', # yellow

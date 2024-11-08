@@ -29,7 +29,7 @@ wezterm:
   purple: purple
   cyan: cyan
   white: light_gray
-  bright_black: grey
+  bright_black: gray
   bright_red: light_red
   bright_green: light_green
   bright_yellow: light_yellow
@@ -69,23 +69,33 @@ groups:
     CursorLine: '- dark'
 
   types:
-    Variable: 'light_blue'
-    String: 'cyan'
-    Character: 'orange'
-    Constant: 'blue'
-    Number: 'green'
-    Boolean: 'blue'
-    Float: 'green'
-    Identifier: 'light_blue'
-    Function: 'yellow'
+    SpecialChar: 'fg'
     Operator: 'fg'
+
+    String: 'green'
+
+    Character: 'orange'
+    Special: 'orange'
+
+    Number: 'cyan'
+    Float: 'cyan'
+
+    Variable: 'light_blue'
+    Identifier: 'light_blue'
+
+    Function: 'yellow'
+
+    Constant: 'blue'
+    Boolean: 'blue'
     Type: 'blue'
     StorageClass: 'blue'
     Structure: 'blue'
     Typedef: 'blue'
+    Conditional: 'blue'
+    Tag: 'blue'
+
     Keyword: 'purple'
     Statement: 'purple'
-    Conditional: 'blue'
     Repeat: 'purple'
     Label: 'purple'
     Exception: 'purple'
@@ -94,9 +104,7 @@ groups:
     Define: 'purple'
     Macro: 'purple'
     PreCondit: 'purple'
-    Special: 'orange'
-    SpecialChar: 'white'
-    Tag: 'blue'
+
 
   diff:
     DiffAdd: 'alt_bg sign_add'
@@ -142,7 +150,7 @@ groups:
     ErrorMsg: 'error_red bg b'
     Search: 'light_gray search_blue'
     IncSearch: 'light_gray search_blue'
-    Substitute: 'light_gray search_orange'
+    Substitute: 'dark_gray search_orange'
     MoreMsg: 'orange'
     Question: 'orange'
     EndOfBuffer: 'bg'

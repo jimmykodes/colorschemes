@@ -7,7 +7,7 @@ green: &green "#9ee865"
 gray: &gray "#9fa19f"
 orange: &orange "#f09a65"
 purple: &purple "#e46cca"
-red: &red "#ef7374"
+red: &red "#ff5051"
 yellow: &yellow "#f5de69"
 yellow_bright: &yellow_bright "#fff27d"
 

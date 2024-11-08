@@ -1,8 +1,8 @@
 local colors = {
 	normal  = '#899eea',
 	insert  = '#9ee865',
-	visual  = '#9141cb',
-	replace = '#ef7374',
+	visual  = '#b969f3',
+	replace = '#ff5051',
 	command = '#f09a65',
 
 	fg      = '#d1e5d9',

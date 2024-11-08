@@ -6,17 +6,48 @@ colors:
   fg: "#d1e5d9"
   bg: "#232d36"
 
-  red: "#ef7374"
-  green: "#9ee865"
-  yellow: "#f5de69"
-  blue: "#899eea"
-  purple: "#9141cb"
-  cyan: "#66d8f6"
-  orange: "#f09a65"
-  magenta: "#e46cca"
+  _normal: "#9fa19f"
+  _flying: "#81b9ef"
+  _poison: "#9141cb"
+  _ground: "#915121"
+  _rock: "#afa981"
+  _steel: "#60a1b8"
+  _fire: "#e62829"
+  _water: "#2980ef"
+  _grass: "#3fa129"
+  _electric: "#fac000"
+  _ice: "#3dcef3"
+  _dragon: "#5060e1"
+  _fairy: "#ef70ef"
+  _bug: "#91a119"
+  _ghost: "#704170"
+  _dark: "#624d4e"
+  _fighting: "#ff8000"
+  _psychic: "#ef4179"
+  _hp: "#69dc12"
+  _light_hp: "#9ee865"
+  _attack: "#efcc18"
+  _light_attack: "#f5de69"
+  _defense: "#e86412"
+  _light_defense: "#f09a65"
+  _sp_attack: "#14c3f1"
+  _light_sp_attack: "#66d8f6"
+  _sp_defense: "#4a6adf"
+  _light_sp_defense: "#899eea"
+  _speed: "#d51dad"
+  _light_speed: "#e46cca"
+
+  red: lighten _fire 40
+  green: ref _light_hp
+  yellow: ref _light_attack
+  blue: ref _light_sp_defense
+  purple: lighten _poison 40
+  cyan: ref _light_sp_attack
+  orange: ref _light_defense
+  magenta: ref _light_speed
   white: "#e5f1ec"
-  gray: "#9fa19f"
-  dark_gray: "#624d4e"
+  gray: ref _normal
+  dark_gray: ref _dark
   black: "darken bg 10"
 
   light_black: ref dark_gray
@@ -29,11 +60,11 @@ colors:
   light_white: lighten white 20
   light_gray: "lighten gray 50"
 
-  info_yellow: "darken yellow 10"
-  yellow_orange: "ref orange"
-  hint_blue: "darken blue 10"
-  ui_blue: "ref light_blue"
-  accent: 'ref light_gray'
+  info_yellow: ref _electric
+  yellow_orange: ref _fighting
+  hint_blue: ref _dragon
+  ui_blue: ref _sp_defense
+  accent: ref _steel
   warning_orange: "ref orange"
   purple_test: "ref purple"
   search_blue: "ref hint_blue"
@@ -43,18 +74,18 @@ colors:
   highlight_alt_bg: 'lighten alt_bg 10'
   dark: ref black
 
-  comment: "darken gray 10"
-  context: "ref comment"
+  comment: ref _steel
+  context: ref comment
 
-  cursor_fg: 'ref bg'
-  cursor_bg: 'ref fg'
-  cursor_line: 'darken bg 5'
+  cursor_fg: ref bg
+  cursor_bg: ref fg
+  cursor_line: darken bg 5
 
-  error_red: 'ref red'
+  error_red: ref red
 
-  sign_add: 'ref green'
-  sign_change: 'ref blue'
-  sign_delete: 'ref orange'
+  sign_add: ref green
+  sign_change: ref blue
+  sign_delete: ref orange
 
   selection_bg: ref blue
   selection_fg: ref bg

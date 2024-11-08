@@ -1,17 +1,17 @@
 [colors]
 ansi = [
 	 '#624d4e', # black
-	 '#ef7374', # red
+	 '#ff5051', # red
 	 '#9ee865', # green
 	 '#f5de69', # yellow
 	 '#899eea', # blue
-	 '#9141cb', # purple
+	 '#b969f3', # purple
 	 '#66d8f6', # cyan
 	 '#d1d3d1', # white
 ]
 brights = [
-	 '<nil>', # black
-	 '#ff8788', # red
+	 '#9fa19f', # black
+	 '#ff6465', # red
 	 '#b2fc79', # green
 	 '#fff27d', # yellow
 	 '#9db2fe', # blue
