@@ -66,8 +66,8 @@ html:
 wezterm:
   fg: fg
   bg: bg
-  cursor_fg: bg
-  cursor_bg: magenta
+  cursor_fg: cursor_fg
+  cursor_bg: cursor_bg
   cursor_border: magenta
   selection_bg: light_blue
   selection_fg: bg
