@@ -17,6 +17,12 @@ func WithParsedSchema(f func(*gommand.Context, scheme.Scheme) error) func(ctx *g
 			fmt.Println("Error decoding scheme", "-", err)
 			return err
 		}
+		for _, color := range s.Colors {
+			_, err := color.Value(s.Colors)
+			if err != nil {
+				return err
+			}
+		}
 		var invalidColors error
 		for _, group := range s.Groups {
 			for name, hl := range group {
