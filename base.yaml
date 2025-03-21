@@ -255,6 +255,7 @@ groups:
     LuaLineDiffDelete: 'sign_delete'
 
   lsp:
+    LspCodeLens: 'gray'
     LspDiagnosticsDefaultError: 'error_red'
     LspDiagnosticsDefaultWarning: 'warning_orange'
     LspDiagnosticsDefaultInformation: 'info_yellow'
