@@ -3,57 +3,57 @@ metadata:
   theme: dark
 
 colors:
-  white: "#e0fbff"
-  gray: "#768789"
-  dark_gray: "#384547"
+  fg: "#E5E9F0"
+  bg: "#2E3440"
+  red: "#BF616A"
+  green: "#8FBCBB"
+  yellow: "#EBCB8B"
+  blue: "#81A1C1"
+  purple: "#5E81AC"
+  cyan: "#88C0D0"
+  orange: "#D08770"
+  magenta: "#B48EAD"
+  white: "#ECEFF4"
+  gray: "#434C5E" 
+  dark_gray: "#3B4252"
+  black: darken bg 10
 
-  green: "#80ddd0"
-  cyan: "#80c3dd"
-  blue: "#80a2eb"
-  yellow: "#ddd180"
-  orange: "#e5b680"
-  magenta: "#dd73d1"
-  red: "#dd7383"
-  purple: "#b680e5"
-
-  bg: "#1e2530"
-  fg: "#b8d7db"
-
+  light_black: ref dark_gray
+  light_red: lighten red 20
+  light_green: lighten green 20
+  light_yellow: lighten yellow 20
+  light_blue: lighten blue 20
+  light_purple: lighten purple 20
+  light_cyan: lighten cyan 20
+  light_white: lighten white 20
   light_gray: "lighten gray 50"
 
-  info_yellow: "darken yellow 10"
-  yellow_orange: "ref orange"
+  info_yellow: ref yellow
+  yellow_orange: ref orange
+  hint_blue: ref blue
+  ui_blue: ref purple
+  accent: ref dark_gray
+  warning_orange: ref orange
+  purple_test: ref magenta
+  search_blue: ref hint_blue
+  search_orange: ref info_yellow
 
-  light_red: "lighten red 20"
-
-  light_green: "lighten green 20"
-
-  light_blue: "lighten blue 10"
-  hint_blue: "darken blue 10"
-  ui_blue: "ref light_blue"
-
-  accent: 'ref light_gray'
-  warning_orange: "ref orange"
-  purple_test: "ref purple"
-
-  search_blue: "ref hint_blue"
-  search_orange: "ref info_yellow"
-
-  light_purple: "lighten purple 20"
-
-  alt_bg: "lighten bg 10"
-  black: "darken bg 10"
+  alt_bg: lighten bg 10
+  highlight_alt_bg: lighten alt_bg 10
   dark: ref black
-  highlight_alt_bg: 'lighten alt_bg 20'
 
-  comment: "ref gray"
-  context: "ref gray"
+  comment: ref gray
+  context: ref comment
 
-  cursor_fg: 'ref bg'
-  cursor_bg: 'ref fg'
+  cursor_fg: ref bg
+  cursor_bg: ref fg
+  cursor_line: darken bg 5
 
-  error_red: 'ref red'
+  error_red: ref red
 
-  sign_add: 'ref green'
-  sign_change: 'ref blue'
-  sign_delete: 'ref orange'
+  sign_add: ref green
+  sign_change: ref blue
+  sign_delete: ref orange
+
+  selection_bg: ref blue
+  selection_fg: ref bg
