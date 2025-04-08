@@ -30,12 +30,12 @@ colors:
 
   info_yellow: ref yellow
   yellow_orange: ref orange
-  hint_blue: ref blue
+  hint: ref blue
   ui_blue: ref purple
   accent: ref dark_gray
   warning_orange: ref orange
   purple_test: ref magenta
-  search_blue: ref hint_blue
+  search_blue: ref hint
   search_orange: ref info_yellow
 
   alt_bg: lighten bg 10

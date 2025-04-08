@@ -62,12 +62,12 @@ colors:
 
   info_yellow: ref _electric
   yellow_orange: ref _fighting
-  hint_blue: ref _dragon
+  hint: ref _dragon
   ui_blue: ref _sp_defense
   accent: ref _steel
   warning_orange: "ref orange"
   purple_test: "ref purple"
-  search_blue: "ref hint_blue"
+  search_blue: "ref hint"
   search_orange: "ref info_yellow"
 
   alt_bg: "lighten bg 10"

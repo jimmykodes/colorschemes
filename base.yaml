@@ -113,7 +113,7 @@ groups:
 
   highlights:
     MatchWord: '- - u'
-    MatchParen: 'hint_blue bg u'
+    MatchParen: 'hint bg u'
     MatchWordCur: '- - u'
     MatchParenCur: '- - u'
     SignColumn: '- bg'
@@ -256,36 +256,37 @@ groups:
 
   lsp:
     LspCodeLens: 'gray'
+    LspInlayHint: 'gray'
     LspDiagnosticsDefaultError: 'error_red'
     LspDiagnosticsDefaultWarning: 'warning_orange'
     LspDiagnosticsDefaultInformation: 'info_yellow'
-    LspDiagnosticsDefaultHint: 'hint_blue'
+    LspDiagnosticsDefaultHint: 'hint'
     LspDiagnosticsVirtualTextError: 'error_red'
     LspDiagnosticsVirtualTextWarning: 'warning_orange'
     LspDiagnosticsVirtualTextInformation: 'info_yellow'
-    LspDiagnosticsVirtualTextHint: 'hint_blue'
+    LspDiagnosticsVirtualTextHint: 'hint'
     LspDiagnosticsFloatingError: 'error_red'
     LspDiagnosticsFloatingWarning: 'warning_orange'
     LspDiagnosticsFloatingInformation: 'info_yellow'
-    LspDiagnosticsFloatingHint: 'hint_blue'
+    LspDiagnosticsFloatingHint: 'hint'
     LspDiagnosticsSignError: 'error_red'
     LspDiagnosticsSignWarning: 'warning_orange'
     LspDiagnosticsSignInformation: 'info_yellow'
-    LspDiagnosticsSignHint: 'hint_blue'
+    LspDiagnosticsSignHint: 'hint'
     LspDiagnosticsError: 'error_red'
     LspDiagnosticsWarning: 'warning_orange'
     LspDiagnosticsInformation: 'info_yellow'
-    LspDiagnosticsHint: 'hint_blue'
+    LspDiagnosticsHint: 'hint'
     LspDiagnosticsUnderlineError: '- - u'
     LspDiagnosticsUnderlineWarning: '- - u'
     LspDiagnosticsUnderlineInformation: '- - u'
     LspDiagnosticsUnderlineHint: '- - u'
 
     QuickScopePrimary: 'magenta - u'
-    QuickScopeSecondary: 'hint_blue - u'
+    QuickScopeSecondary: 'hint - u'
 
   telescope:
-    TelescopeSelection: 'hint_blue'
+    TelescopeSelection: 'hint'
     TelescopeMatching: 'info_yellow - b'
 
   nvim_tree:

@@ -2,7 +2,7 @@ NVIM_DIR=../colorschemes.nvim
 WEZTERM_DIR=../colorschemes.wezterm
 K9S_DIR=../colorschemes.k9s
 
-# all: colors/*.vim
+all: wezterm k9s nvim
 
 # Create a list of source YAML files
 TEMPLATES := $(wildcard templates/*.yaml)

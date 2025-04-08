@@ -23,14 +23,14 @@ colors:
 
   blue: "#90b0ff"
   light_blue: "lighten blue 10"
-  hint_blue: "darken blue 10"
+  hint: "darken blue 10"
   ui_blue: "ref light_blue"
 
   accent: 'ref light_gray'
   warning_orange: "ref orange"
   purple_test: "ref purple"
 
-  search_blue: "ref hint_blue"
+  search_blue: "ref hint"
   search_orange: "ref info_yellow"
 
   magenta: "#bf79bf"

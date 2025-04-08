@@ -40,7 +40,7 @@ colors:
   error_red: '#F44747'
   warning_orange: '#ff8800'
   info_yellow: '#FFCC66'
-  hint_blue: '#4FC1FF'
+  hint: '#4FC1FF'
   ui_blue: '#264F78'
   selection_bg: ref ui_blue
   selection_fg: ref bg
