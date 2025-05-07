@@ -4,16 +4,16 @@ metadata:
 
 colors:
   fg: "#E5E9F0"
-  bg: "#2E3440"
+  bg: "#222834"
   red: "#BF616A"
-  green: "#8FBCBB"
+  green: "#8fbc95"
   yellow: "#EBCB8B"
-  blue: "#81A1C1"
-  purple: "#5E81AC"
-  cyan: "#88C0D0"
+  blue: "#5ca1c1"
+  purple: "#5e62ac"
+  cyan: "#88e0d0"
   orange: "#D08770"
   magenta: "#B48EAD"
-  white: "#ECEFF4"
+  white: "#ceeff4"
   gray: "#434C5E" 
   dark_gray: "#3B4252"
   black: darken bg 10
