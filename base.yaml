@@ -245,7 +245,7 @@ groups:
     diffAdded: 'sign_add'
     diffRemoved: 'sign_delete'
     diffFileId: 'blue - br'
-    diffFile: 'comment alt_bg'
+    diffFile: comment
     diffNewFile: 'green'
     diffOldFile: 'red'
 
