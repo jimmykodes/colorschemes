@@ -14,7 +14,7 @@ colors:
   orange: "#D08770"
   magenta: "#B48EAD"
   white: "#ceeff4"
-  gray: "#434C5E" 
+  gray: "#6b7486"
   dark_gray: "#3B4252"
   black: darken bg 10
 
