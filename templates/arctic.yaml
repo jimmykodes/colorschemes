@@ -28,19 +28,18 @@ colors:
   light_white: lighten white 20
   light_gray: "lighten gray 50"
 
-  info_yellow: ref yellow
-  yellow_orange: ref orange
-  hint: ref blue
-  ui_blue: ref purple
+  hint: ref magenta
+  info: ref blue
+  warning: ref yellow
+  error: ref red
+  
   accent: ref dark_gray
-  warning_orange: ref orange
-  purple_test: ref magenta
   search_blue: ref hint
-  search_orange: ref info_yellow
+  search_orange: ref orange
 
-  alt_bg: lighten bg 10
-  highlight_alt_bg: lighten alt_bg 10
-  dark: ref black
+  bg_dark: darken bg 10
+  bg_light: lighten bg 10
+  highlight_alt_bg: lighten bg_light 10
 
   comment: ref gray
   context: ref comment
@@ -49,11 +48,9 @@ colors:
   cursor_bg: ref fg
   cursor_line: darken bg 5
 
-  error_red: ref red
-
   sign_add: ref green
   sign_change: ref blue
   sign_delete: ref orange
 
-  selection_bg: ref blue
-  selection_fg: ref bg
+  selection_bg: ref highlight_alt_bg
+  selection_fg: ref fg
