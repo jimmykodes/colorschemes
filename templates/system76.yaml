@@ -2,47 +2,59 @@ metadata:
   name: system76
   theme: dark
 
+# dark_blue: '#223E55'
+# yellow_orange: '#D7BA7D'
+
 colors:
   fg: '#cccccc'
   bg: '#222222'
-  alt_bg: '#282828'
-  highlight_alt_bg: 'lighten alt_bg 20'
-  cursor_fg: 'ref bg'
-  cursor_bg: 'ref cyan'
-  dark: '#242424'
-  accent: '#BBBBBB'
-  popup_back: '#2D2D30'
-  search_orange: '#613214'
-  search_blue: '#5e81ac'
+  red: '#f15d22'
+  green: '#6eaa76'
+  yellow: '#eece61'
+  blue: '#18a9c7'
+  purple: '#ad7fa8'
+  cyan: '#7ec589'
+  orange: '#d19a66'
+  magenta: '#D16D9E'
   white: '#D8DEE9'
   gray: '#98918d'
   dark_gray: '#3e3e3e'
-  black: '#1a1a1a'
+
+  black: darken bg 10
+
+  light_black: ref dark_gray
+  light_red: '#D16969'
+  light_green: '#B5CEA8'
+  light_yellow: lighten yellow 20
+  light_blue: '#81c8d6'
+  light_purple: lighten purple 20
+  light_cyan: lighten cyan 20
+  light_white: lighten white 20
+  light_gray: "#c8c9c1"
+
+  hint: '#4FC1FF'
+  info: '#264F78'
+  warning: '#ff8800'
+  error: '#F44747'
+  
+  accent: '#BBBBBB'
+  search_blue: '#5e81ac'
+  search_orange: '#613214'
+
+  bg_dark: darken bg 10
+  bg_light: lighten bg 10
+  highlight_alt_bg: lighten bg_light 10
+
   comment: '#787878'
   context: '#606060'
-  light_gray: '#c8c9c1'
-  blue: '#18a9c7'
-  dark_blue: '#223E55'
-  light_blue: '#81c8d6'
-  green: '#6eaa76'
-  cyan: '#7ec589'
-  light_green: '#B5CEA8'
-  red: '#f15d22'
-  light_red: '#D16969'
-  orange: '#d19a66'
-  yellow: '#eece61'
-  yellow_orange: '#D7BA7D'
-  purple: '#ad7fa8'
-  magenta: '#D16D9E'
+
+  cursor_fg: ref bg
+  cursor_bg: ref cyan
+  cursor_line: darken bg 5
+
   sign_add: '#587c0c'
   sign_change: '#0c7d9d'
   sign_delete: '#b81a22'
-  error_red: '#F44747'
-  warning_orange: '#ff8800'
-  info_yellow: '#FFCC66'
-  hint: '#4FC1FF'
-  ui_blue: '#264F78'
-  selection_bg: ref ui_blue
-  selection_fg: ref bg
-  light_yellow: ref yellow_orange
-  light_cyan: ref light_green
+
+  selection_bg: ref highlight_alt_bg
+  selection_fg: ref fg
