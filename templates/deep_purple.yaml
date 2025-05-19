@@ -4,6 +4,7 @@ metadata:
 
 colors:
   _gray: "#36454f"
+  _purple: "#49416d"
 
   fg: "#bec4de"
   bg: "#030027"
@@ -12,10 +13,10 @@ colors:
   green: "#49a078"
   yellow: "#d7ba89"
   blue: "#90b0ff"
-  purple: "#49416d"
+  purple:  "#bf79bf"
   cyan: "#a1cca5"
   orange: '#d99058'
-  magenta: "#bf79bf"
+  magenta: "#bf40bf"
   white: "#e5dada"
   gray: "#8c92ac"
   dark_gray: "lighten _gray 50"
