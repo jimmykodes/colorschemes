@@ -43,7 +43,7 @@ colors:
 
   bg_dark: darken bg 10
   bg_light: lighten bg 10
-  highlight_alt_bg: lighten bg_light 10
+  highlight_alt_bg: lighten bg_light 20
 
   comment: ref gray
   context: ref comment
@@ -56,5 +56,5 @@ colors:
   sign_change: ref blue
   sign_delete: ref orange
 
-  selection_bg: ref highlight_alt_bg
+  selection_bg: ref _gray
   selection_fg: ref fg

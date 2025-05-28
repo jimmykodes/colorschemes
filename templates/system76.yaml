@@ -2,7 +2,6 @@ metadata:
   name: system76
   theme: dark
 
-# dark_blue: '#223E55'
 # yellow_orange: '#D7BA7D'
 
 colors:
@@ -21,6 +20,8 @@ colors:
   dark_gray: '#3e3e3e'
 
   black: darken bg 10
+
+  dark_blue: '#223E55'
 
   light_black: ref dark_gray
   light_red: '#D16969'
@@ -56,5 +57,5 @@ colors:
   sign_change: '#0c7d9d'
   sign_delete: '#b81a22'
 
-  selection_bg: ref highlight_alt_bg
+  selection_bg: ref dark_blue
   selection_fg: ref fg
