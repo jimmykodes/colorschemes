@@ -51,6 +51,12 @@ colors:
   sign_add: ref green
   sign_change: ref blue
   sign_delete: ref orange
+  sign_diff: ref yellow
+
+  sign_add_bg: darken sign_add 50
+  sign_change_bg: darken sign_change 50
+  sign_delete_bg: darken sign_delete 50
+  sign_diff_bg: darken sign_diff 50
 
   selection_bg: ref highlight_alt_bg
   selection_fg: ref fg

@@ -109,9 +109,10 @@ groups:
     Macro: 'magenta'
 
   diff:
-    DiffAdd: 'bg_light sign_add'
-    DiffChange: 'bg_light sign_change u'
-    DiffDelete: 'bg_light sign_delete'
+    DiffAdd: '- sign_add_bg'
+    DiffChange: '- sign_change_bg'
+    DiffDelete: '- sign_delete_bg'
+    DiffText: '- sign_diff_bg'
 
   highlights:
     MatchWord: '- - u'
@@ -247,15 +248,15 @@ groups:
     NvimTreeOpenedFolderName: 'cyan - i'
     NvimTreeImageFile: 'purple'
     NvimTreeSpecialFile: 'orange'
-    NvimTreeGitStaged: 'sign_add'
-    NvimTreeGitNew: 'sign_add'
-    NvimTreeGitDirty: 'sign_add'
-    NvimTreeGitDeleted: 'sign_delete'
-    NvimTreeGitMerge: 'sign_change'
-    NvimTreeGitRenamed: 'sign_change'
     NvimTreeSymlink: 'cyan'
     NvimTreeRootFolder: 'fg - b'
     NvimTreeExecFile: 'green'
+    NvimTreeGitStaged: 'sign_add'
+    NvimTreeGitNew: 'sign_add'
+    NvimTreeGitDirty: 'sign_diff'
+    NvimTreeGitDeleted: 'sign_delete'
+    NvimTreeGitMerge: 'sign_change'
+    NvimTreeGitRenamed: 'sign_change'
 
   alpha:
     DashboardHeader: 'light_blue'

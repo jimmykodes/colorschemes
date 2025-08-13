@@ -56,6 +56,13 @@ colors:
   sign_add: '#587c0c'
   sign_change: '#0c7d9d'
   sign_delete: '#b81a22'
+  sign_diff: '#D7BA7D'
+
+  sign_add_bg: '#17310a'
+  sign_change_bg: '#0c3058'
+  sign_delete_bg: '#461a22'
+  sign_diff_bg: '#583a00'
+
 
   selection_bg: ref dark_blue
   selection_fg: ref fg
