@@ -137,7 +137,7 @@ groups:
     Folded: 'accent bg_light'
     FoldColumn: 'accent bg_light'
     LineNr: 'gray -'
-    FloatBorder: 'gray bg_light'
+    FloatBorder: 'gray -'
     Whitespace: 'bg -'
     VertSplit: 'fg bg'
     ColorColumn: '- bg_dark'
@@ -262,6 +262,10 @@ groups:
     DashboardHeader: 'light_blue'
     DashboardCenter: 'purple'
     DashboardFooter: 'cyan'
+    DashboardButtonText: 'light_gray'
+    DashboardButtonTextAlt: gray
+    DashboardButtonShortcut: 'magenta'
+    DashboardButtonShortcutAlt: 'purple'
 
   illuminate:
     IlluminatedWordText: '- highlight_alt_bg'

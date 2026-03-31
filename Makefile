@@ -1,13 +1,15 @@
 NVIM_DIR=/Users/jimmykeith/.local/share/nvim/lazy/colorschemes.nvim
 WEZTERM_DIR=../colorschemes.wezterm
 K9S_DIR=../colorschemes.k9s
+GHOSTTY_DIR=../colorschemes.ghostty
 
-all: wezterm k9s nvim
+all: wezterm k9s nvim ghostty
 
 # Create a list of source YAML files
 TEMPLATES := $(wildcard templates/*.yaml)
 
 WEZTERM_TARGETS := $(patsubst templates/%.yaml,$(WEZTERM_DIR)/%.toml,$(TEMPLATES))
+GHOSTTY_TARGETS := $(patsubst templates/%.yaml,$(GHOSTTY_DIR)/%,$(TEMPLATES))
 K9S_TARGETS := $(patsubst templates/%.yaml,$(K9S_DIR)/%.yaml,$(TEMPLATES))
 NVIM_TARGETS := $(patsubst templates/%.yaml,$(NVIM_DIR)/colors/%.vim,$(TEMPLATES))
 
@@ -18,6 +20,13 @@ wezterm: $(WEZTERM_TARGETS)
 $(WEZTERM_DIR)/%.toml: templates/%.yaml
 	yq eval-all 'select(fileIndex == 0) * select(fileIndex == 1)' base.yaml $< | \
 		go run main.go wezterm --wezterm-dir $(WEZTERM_DIR)
+
+.PHONY: ghostty
+ghostty: $(GHOSTTY_TARGETS)
+
+$(GHOSTTY_DIR)/%: templates/%.yaml
+	yq eval-all 'select(fileIndex == 0) * select(fileIndex == 1)' base.yaml $< | \
+		go run main.go ghostty --dir $(GHOSTTY_DIR)
 	
 .PHONY: k9s
 k9s: $(K9S_TARGETS)

@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/jimmykodes/colorschemes/cmd/ghostty"
 	"github.com/jimmykodes/colorschemes/cmd/k9s"
 	"github.com/jimmykodes/colorschemes/cmd/nvim"
 	"github.com/jimmykodes/colorschemes/cmd/wezterm"
@@ -15,6 +16,7 @@ func Cmd() *gommand.Command {
 		wezterm.Cmd(),
 		k9s.Cmd(),
 		nvim.Cmd(),
+		ghostty.Cmd(),
 	)
 	return cmd
 }
