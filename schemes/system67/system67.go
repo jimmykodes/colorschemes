@@ -16,7 +16,6 @@ var (
 	white    = colorschemes.ColorMustFromHex("#7b7e84")
 	gray     = colorschemes.ColorMustFromHex("#52524f")
 	darkGray = colorschemes.ColorMustFromHex("#302f2f")
-	darkBlue = colorschemes.ColorMustFromHex("#223E55")
 
 	signAdd    = colorschemes.ColorMustFromHex("#587c0c")
 	signChange = colorschemes.ColorMustFromHex("#0c7d9d")
@@ -84,7 +83,4 @@ var System67 = &colorschemes.Colorscheme{
 	SignDelete:       signDelete,
 	SignDeleteBg:     colorschemes.ColorMustFromHex("#461a22"),
 	SignStagedDelete: signDelete.Lerp(bg, .25),
-
-	SelectionBg: darkBlue,
-	SelectionFg: fg,
 }

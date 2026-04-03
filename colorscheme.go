@@ -77,9 +77,6 @@ type Colorscheme struct {
 	SignDelete       Color `json:"sign_delete"`
 	SignDeleteBg     Color `json:"sign_delete_bg"`
 	SignStagedDelete Color `json:"sign_staged_delete"`
-
-	SelectionBg Color `json:"selection_bg"`
-	SelectionFg Color `json:"selection_fg"`
 }
 
 func (c Colorscheme) Map() (map[string]string, error) {

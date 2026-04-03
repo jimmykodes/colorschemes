@@ -64,7 +64,7 @@ var System76 = &colorschemes.Colorscheme{
 	Error:   colorschemes.ColorMustFromHex("#F44747"),
 
 	Accent:  colorschemes.ColorMustFromHex("#BBBBBB"),
-	Search:  colorschemes.ColorMustFromHex("#5e81ac"),
+	Search:  darkBlue,
 	Replace: colorschemes.ColorMustFromHex("#613214"),
 	Comment: colorschemes.ColorMustFromHex("#787878"),
 	Context: colorschemes.ColorMustFromHex("#606060"),
@@ -77,14 +77,11 @@ var System76 = &colorschemes.Colorscheme{
 	SignDiffBg:       colorschemes.ColorMustFromHex("#583a00"),
 	SignAdd:          signAdd,
 	SignAddBg:        colorschemes.ColorMustFromHex("#17310a"),
-	SignStagedAdd:    signAdd.Lerp(bg, .25),
+	SignStagedAdd:    signAdd.Lerp(bg, .5),
 	SignChange:       signChange,
 	SignChangeBg:     colorschemes.ColorMustFromHex("#0c3058"),
-	SignStagedChange: signChange.Lerp(bg, .25),
+	SignStagedChange: signChange.Lerp(bg, .5),
 	SignDelete:       signDelete,
 	SignDeleteBg:     colorschemes.ColorMustFromHex("#461a22"),
-	SignStagedDelete: signDelete.Lerp(bg, .25),
-
-	SelectionBg: darkBlue,
-	SelectionFg: fg,
+	SignStagedDelete: signDelete.Lerp(bg, .5),
 }

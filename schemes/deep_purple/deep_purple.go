@@ -3,9 +3,6 @@ package deep_purple
 import "github.com/jimmykodes/colorschemes"
 
 var (
-	_gray   = colorschemes.ColorMustFromHex("#36454f")
-	_purple = colorschemes.ColorMustFromHex("#49416d")
-
 	fg      = colorschemes.ColorMustFromHex("#bec4de")
 	bg      = colorschemes.ColorMustFromHex("#030027")
 	red     = colorschemes.ColorMustFromHex("#9d5060")
@@ -19,7 +16,7 @@ var (
 	white   = colorschemes.ColorMustFromHex("#e5dada")
 	gray    = colorschemes.ColorMustFromHex("#8c92ac")
 
-	dark_gray = _gray.Lighten(.50)
+	dark_gray = colorschemes.ColorMustFromHex("#36454f").Lighten(.50)
 	black     = bg.Darken(0.1)
 )
 
@@ -83,7 +80,4 @@ var DeepPurple = &colorschemes.Colorscheme{
 	SignDelete:       orange,
 	SignDeleteBg:     orange.Darken(.50),
 	SignStagedDelete: orange.Lerp(bg, 0.25),
-
-	SelectionBg: _gray,
-	SelectionFg: fg,
 }
