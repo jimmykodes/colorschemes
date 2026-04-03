@@ -1,6 +1,6 @@
 {{- define "style" -}}
-{ {{ if .Link }}
-    link = {{ .Link }}
+{ {{ if .Link -}}
+    link = "{{ .Link }}"
   {{- else -}}
     {{- if ne .FG "" }}fg = c.{{ .FG }}, {{ end -}}
     {{- if ne .BG "" }}bg = c.{{ .BG }}, {{ end -}}

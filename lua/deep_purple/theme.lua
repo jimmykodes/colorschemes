@@ -19,16 +19,19 @@ function M.setup()
   hl(0, "CursorLine", { bg = c.cursor_line,  })
 
   -- diff
+  hl(0, "Added", { fg = c.sign_add,  })
+  hl(0, "Changed", { fg = c.sign_change,  })
   hl(0, "DiffAdd", { bg = c.sign_add_bg,  })
   hl(0, "DiffChange", { bg = c.sign_change_bg,  })
   hl(0, "DiffDelete", { bg = c.sign_delete_bg,  })
   hl(0, "DiffText", { bg = c.sign_diff_bg,  })
-  hl(0, "GitSignsAdd", { fg = c.sign_add,  })
-  hl(0, "GitSignsChange", { fg = c.sign_change,  })
-  hl(0, "GitSignsDelete", { fg = c.sign_delete,  })
+  hl(0, "GitSignsAdd", { link = "Added" })
+  hl(0, "GitSignsChange", { link = "Changed" })
+  hl(0, "GitSignsDelete", { link = "Removed" })
   hl(0, "GitSignsStagedAdd", { fg = c.sign_staged_add,  })
   hl(0, "GitSignsStagedChange", { fg = c.sign_staged_change,  })
   hl(0, "GitSignsStagedDelete", { fg = c.sign_staged_delete,  })
+  hl(0, "Removed", { fg = c.sign_delete,  })
 
   -- highlights
   hl(0, "Bold", { bold = true,  })

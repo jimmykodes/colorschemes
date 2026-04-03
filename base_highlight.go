@@ -95,14 +95,18 @@ var BaseHighlights = &Highlights{
 			"Macro":     {FG: "magenta"},
 		},
 		"diff": {
+			"Added":   {FG: "sign_add"},
+			"Changed": {FG: "sign_change"},
+			"Removed": {FG: "sign_delete"},
+
 			"DiffAdd":    {BG: "sign_add_bg"},
 			"DiffChange": {BG: "sign_change_bg"},
 			"DiffDelete": {BG: "sign_delete_bg"},
 			"DiffText":   {BG: "sign_diff_bg"},
 
-			"GitSignsAdd":          {FG: "sign_add"},
-			"GitSignsChange":       {FG: "sign_change"},
-			"GitSignsDelete":       {FG: "sign_delete"},
+			"GitSignsAdd":          {Link: "Added"},
+			"GitSignsChange":       {Link: "Changed"},
+			"GitSignsDelete":       {Link: "Removed"},
 			"GitSignsStagedAdd":    {FG: "sign_staged_add"},
 			"GitSignsStagedChange": {FG: "sign_staged_change"},
 			"GitSignsStagedDelete": {FG: "sign_staged_delete"},
