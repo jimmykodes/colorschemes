@@ -2,7 +2,7 @@ local M = {}
 
 M.accent = '#bbbbbb'
 M.bg = '#222222'
-M.bg_dark = '#080808'
+M.bg_dark = '#151515'
 M.bg_light = '#2f2f2f'
 M.black = '#080808'
 M.blue = '#18a9c7'
