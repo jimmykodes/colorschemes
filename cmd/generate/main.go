@@ -68,7 +68,7 @@ func nvim(ctx *gommand.Context, templates *tmpl.Tmpl, s scheme.Scheme) error {
 	if err := os.MkdirAll(colorDir, 0o766); err != nil && !os.IsExist(err) {
 		return fmt.Errorf("make colors dir: %w", err)
 	}
-	if err := templates.Vim(colorDir, s); err != nil {
+	if err := templates.Lua(colorDir, s); err != nil {
 		return fmt.Errorf("generate colors: %w", err)
 	}
 

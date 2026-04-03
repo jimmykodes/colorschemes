@@ -23,25 +23,19 @@ func WithParsedSchema(f func(*gommand.Context, scheme.Scheme) error) func(ctx *g
 				return err
 			}
 		}
-		var invalidColors error
+		var invalidColors []error
 		for _, group := range s.Groups {
 			for name, hl := range group {
 				if _, ok := s.Colors[hl.FG]; hl.FG != "" && hl.FG != "-" && !ok {
-					invalidColors = errors.Join(
-						invalidColors,
-						fmt.Errorf("%s: invalid fg color '%s' for name %s\n", s.Metadata.Name, hl.FG, name),
-					)
+					invalidColors = append(invalidColors, fmt.Errorf("invalid fg color '%s' for name %s", hl.FG, name))
 				}
 				if _, ok := s.Colors[hl.BG]; hl.BG != "" && hl.BG != "-" && !ok {
-					invalidColors = errors.Join(
-						invalidColors,
-						fmt.Errorf("%s: invalid bg color '%s' for name %s\n", s.Metadata.Name, hl.BG, name),
-					)
+					invalidColors = append(invalidColors, fmt.Errorf("invalid bg color '%s' for name %s", hl.FG, name))
 				}
 			}
 		}
-		if invalidColors != nil {
-			return invalidColors
+		if len(invalidColors) != 0 {
+			return errors.Join(invalidColors...)
 		}
 		return f(ctx, s)
 	}
