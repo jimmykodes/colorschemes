@@ -1,4 +1,4 @@
-NVIM_DIR=/Users/jimmykeith/.local/share/nvim/lazy/colorschemes.nvim
+NVIM_DIR=../colorschemes.nvim
 WEZTERM_DIR=../colorschemes.wezterm
 K9S_DIR=../colorschemes.k9s
 GHOSTTY_DIR=../colorschemes.ghostty

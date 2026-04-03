@@ -81,10 +81,6 @@ groups:
     Number: 'cyan'
     Float: 'cyan'
 
-    '@variable.member': light_blue
-    Variable: 'light_blue'
-    Identifier: 'light_blue'
-
     Function: 'yellow'
 
     Constant: 'blue'
@@ -95,6 +91,10 @@ groups:
     Typedef: 'blue'
     Conditional: 'blue'
     Tag: 'blue'
+
+    '@variable.member': light_blue
+    Variable: 'light_blue'
+    Identifier: 'light_blue'
 
     Keyword: 'purple'
     Statement: 'purple'
@@ -113,6 +113,12 @@ groups:
     DiffChange: '- sign_change_bg'
     DiffDelete: '- sign_delete_bg'
     DiffText: '- sign_diff_bg'
+    GitSignsAdd: 'sign_add'
+    GitSignsChange: 'sign_change'
+    GitSignsDelete: 'sign_delete'
+    GitSignsStagedAdd: 'sign_staged_add'
+    GitSignsStagedChange: 'sign_staged_change'
+    GitSignsStagedDelete: 'sign_staged_delete'
 
   highlights:
     MatchWord: '- - u'
@@ -174,35 +180,6 @@ groups:
   treesitter:
     TSInstalled: 'green black'
     TSMissing: 'error black'
-
-  git:
-    SignAdd: 'sign_add'
-    SignChange: 'sign_change'
-    SignDelete: 'sign_delete'
-    GitSignsAdd: 'sign_add'
-    GitSignsChange: 'sign_change'
-    GitSignsDelete: 'sign_delete'
-
-    DiffViewNormal: 'gray bg_light'
-    DiffviewStatusAdded: 'sign_add'
-    DiffviewStatusModified: 'sign_change'
-    DiffviewStatusRenamed: 'sign_change'
-    DiffviewStatusDeleted: 'sign_delete'
-    DiffviewFilePanelInsertion: 'sign_add'
-    DiffviewFilePanelDeletion: 'sign_delete'
-    DiffviewVertSplit: '- bg'
-
-    diffAdded: 'sign_add'
-    diffRemoved: 'sign_delete'
-    diffFileId: 'blue - br'
-    diffFile: comment
-    diffNewFile: 'green'
-    diffOldFile: 'red'
-
-  lualine:
-    LuaLineDiffAdd: 'sign_add'
-    LuaLineDiffChange: 'sign_change'
-    LuaLineDiffDelete: 'sign_delete'
 
   lsp:
     LspCodeLens: 'gray'

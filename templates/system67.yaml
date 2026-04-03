@@ -1,44 +1,44 @@
 metadata:
-  name: system76
-  theme: dark
+  name: system67
+  theme: light
 
-# yellow_orange: '#D7BA7D'
 
 colors:
-  fg: '#cccccc'
-  bg: '#222222'
-  red: '#f15d22'
-  green: '#6eaa76'
-  yellow: '#eece61'
-  blue: '#18a9c7'
-  purple: '#ad7fa8'
-  cyan: '#7ec589'
-  orange: '#d19a66'
-  magenta: '#D16D9E'
-  white: '#D8DEE9'
-  gray: '#98918d'
-  dark_gray: '#3e3e3e'
+  fg: '#222222'
+  bg: '#eeeeee'
 
-  black: darken bg 10
+  red: '#e95a21'
+  green: '#5e9366'
+  yellow: '#907d3b'
+  blue: '#148ba3'
+  purple: '#956d90'
+  cyan: '#5d9266'
+  orange: '#9e744d'
+  magenta: '#ad5a83'
+  white: '#7b7e84'
+  gray: '#52524f'
+  dark_gray: '#302f2f'
+
+  black: darken fg 10
 
   dark_blue: '#223E55'
 
   light_black: ref dark_gray
-  light_red: '#D16969'
-  light_green: '#B5CEA8'
+  light_red: '#b25a5a'
+  light_green: '#6e7e66'
   light_yellow: lighten yellow 20
-  light_blue: '#81c8d6'
+  light_blue: '#5a8b95'
   light_purple: lighten purple 20
   light_cyan: lighten cyan 20
   light_white: lighten white 20
-  light_gray: "#c8c9c1"
+  light_gray: "#7f7f7a"
 
-  hint: '#4FC1FF'
+  hint: '#3b91bf'
   info: '#264F78'
-  warning: '#ff8800'
+  warning: '#c66900'
   error: '#F44747'
   
-  accent: '#BBBBBB'
+  accent: '#7d7d7d'
   search_blue: '#5e81ac'
   search_orange: '#613214'
 
@@ -56,7 +56,7 @@ colors:
   sign_add: '#587c0c'
   sign_change: '#0c7d9d'
   sign_delete: '#b81a22'
-  sign_diff: '#D7BA7D'
+  sign_diff: '#87754e'
 
   sign_staged_add: darken sign_add 25
   sign_staged_change: darken sign_change 25

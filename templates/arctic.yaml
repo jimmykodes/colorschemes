@@ -53,6 +53,10 @@ colors:
   sign_delete: ref orange
   sign_diff: ref yellow
 
+  sign_staged_add: darken sign_add 25
+  sign_staged_change: darken sign_change 25
+  sign_staged_delete: darken sign_delete 25
+
   sign_add_bg: darken sign_add 50
   sign_change_bg: darken sign_change 50
   sign_delete_bg: darken sign_delete 50

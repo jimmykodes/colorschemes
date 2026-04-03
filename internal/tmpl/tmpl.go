@@ -71,7 +71,7 @@ func (t *Tmpl) K9s(dir string, scheme scheme.Scheme) error {
 }
 
 func (t *Tmpl) Vim(colorDir string, scheme scheme.Scheme) error {
-	f, err := os.Create(filepath.Join(colorDir, scheme.Metadata.Name+".vim"))
+	f, err := os.Create(filepath.Join(colorDir, scheme.Metadata.Name+".lua"))
 	if err != nil {
 		return err
 	}
