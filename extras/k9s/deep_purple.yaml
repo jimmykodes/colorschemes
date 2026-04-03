@@ -1,7 +1,7 @@
 # deep_purple
 foreground: &foreground "#bec4de"
 background: &background "#030027"
-black: &black "#00001d"
+black: &black "#000000"
 blue: &blue "#90b0ff"
 green: &green "#49a078"
 gray: &gray "#8c92ac"
@@ -9,7 +9,7 @@ orange: &orange "#d99058"
 purple: &purple "#bf40bf"
 red: &red "#9d5060"
 yellow: &yellow "#d7ba89"
-yellow_bright: &yellow_bright "#ebce9d"
+yellow_bright: &yellow_bright "#f1e7d5"
 
 k9s:
   body:

@@ -10,7 +10,6 @@ import (
 	"github.com/jimmykodes/colorschemes/internal/tmpl"
 	"github.com/jimmykodes/colorschemes/schemes"
 	"github.com/jimmykodes/gommand"
-	"github.com/jimmykodes/gommand/flags"
 )
 
 func main() {
@@ -21,11 +20,6 @@ func main() {
 
 var root = &gommand.Command{
 	Name: "gen",
-	FlagSet: flags.NewFlagSet().AddFlags(
-		flags.StringFlag("nvim-dir", "", "Directory for nvim colors"),
-		flags.StringFlag("k9s-dir", "", "Directory for k9s colors"),
-		flags.StringFlag("ghostty-dir", "", "Directory for k9s colors"),
-	),
 	Run: func(ctx *gommand.Context) error {
 		templates, err := tmpl.New()
 		if err != nil {
@@ -38,9 +32,9 @@ var root = &gommand.Command{
 			}
 			data := &tmpl.TmplContext{HL: colorschemes.BaseHighlights, Colors: colors, Metadata: cs.Metadata}
 			if err := errors.Join(
-				nvim(ctx, templates, data),
-				// k9s(ctx, templates, s),
-				// ghostty(ctx, templates, s),
+				nvim(templates, data),
+				k9s(templates, data),
+				ghostty(templates, data),
 			); err != nil {
 				return err
 			}
@@ -49,8 +43,8 @@ var root = &gommand.Command{
 	},
 }
 
-func nvim(ctx *gommand.Context, templates *tmpl.Tmpl, data *tmpl.TmplContext) error {
-	nvimDir := ctx.Flags().String("nvim-dir")
+func nvim(templates *tmpl.Tmpl, data *tmpl.TmplContext) error {
+	nvimDir := "./"
 
 	colorDir := filepath.Join(nvimDir, "colors")
 	if err := os.MkdirAll(colorDir, 0o766); err != nil && !os.IsExist(err) {
@@ -88,24 +82,26 @@ func nvim(ctx *gommand.Context, templates *tmpl.Tmpl, data *tmpl.TmplContext) er
 	return nil
 }
 
-// func ghostty(ctx *gommand.Context, templates *tmpl.Tmpl, s scheme.Scheme, name string) error {
-// 	dir := ctx.Flags().String("ghostty-dir")
-// 	if err := os.MkdirAll(dir, 0o766); err != nil && !os.IsExist(err) {
-// 		return fmt.Errorf("make ghostty dir: %w", err)
-// 	}
-// 	if err := templates.Ghostty(dir, s, name); err != nil {
-// 		return fmt.Errorf("generate ghostty: %w", err)
-// 	}
-// 	return nil
-// }
-//
-// func k9s(ctx *gommand.Context, templates *tmpl.Tmpl, s scheme.Scheme, name string) error {
-// 	k9sDir := ctx.Flags().String("k9s-dir")
-// 	if err := os.MkdirAll(k9sDir, 0o766); err != nil && !os.IsExist(err) {
-// 		return fmt.Errorf("make k9s dir: %w", err)
-// 	}
-// 	if err := templates.K9s(k9sDir, s, name); err != nil {
-// 		return fmt.Errorf("generate k9s: %w", err)
-// 	}
-// 	return nil
-// }
+func ghostty(templates *tmpl.Tmpl, data *tmpl.TmplContext) error {
+	dir := "./extras/k9s/"
+
+	if err := os.MkdirAll(dir, 0o766); err != nil && !os.IsExist(err) {
+		return fmt.Errorf("make ghostty dir: %w", err)
+	}
+	if err := templates.Ghostty(dir, data); err != nil {
+		return fmt.Errorf("generate ghostty: %w", err)
+	}
+	return nil
+}
+
+func k9s(templates *tmpl.Tmpl, data *tmpl.TmplContext) error {
+	dir := "./extras/k9s/"
+
+	if err := os.MkdirAll(dir, 0o766); err != nil && !os.IsExist(err) {
+		return fmt.Errorf("make k9s dir: %w", err)
+	}
+	if err := templates.K9s(dir, data); err != nil {
+		return fmt.Errorf("generate k9s: %w", err)
+	}
+	return nil
+}

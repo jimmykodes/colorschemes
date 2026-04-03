@@ -1,15 +1,15 @@
 # {{ .Metadata.Name }}
-foreground: &foreground "{{ .K9s.FG | index .Colors }}"
-background: &background "{{ .K9s.BG | index .Colors }}"
-black: &black "{{ .K9s.Black | index .Colors }}"
-blue: &blue "{{ .K9s.Blue | index .Colors }}"
-green: &green "{{ .K9s.Green | index .Colors }}"
-gray: &gray "{{ .K9s.Gray | index .Colors }}"
-orange: &orange "{{ .K9s.Orange | index .Colors }}"
-purple: &purple "{{ .K9s.Purple | index .Colors }}"
-red: &red "{{ .K9s.Red | index .Colors }}"
-yellow: &yellow "{{ .K9s.Yellow | index .Colors }}"
-yellow_bright: &yellow_bright "{{ .K9s.BrightYellow | index .Colors }}"
+foreground: &foreground "{{ .HL.K9s.FG | index .Colors }}"
+background: &background "{{ .HL.K9s.BG | index .Colors }}"
+black: &black "{{ .HL.K9s.Black | index .Colors }}"
+blue: &blue "{{ .HL.K9s.Blue | index .Colors }}"
+green: &green "{{ .HL.K9s.Green | index .Colors }}"
+gray: &gray "{{ .HL.K9s.Gray | index .Colors }}"
+orange: &orange "{{ .HL.K9s.Orange | index .Colors }}"
+purple: &purple "{{ .HL.K9s.Purple | index .Colors }}"
+red: &red "{{ .HL.K9s.Red | index .Colors }}"
+yellow: &yellow "{{ .HL.K9s.Yellow | index .Colors }}"
+yellow_bright: &yellow_bright "{{ .HL.K9s.BrightYellow | index .Colors }}"
 
 k9s:
   body:

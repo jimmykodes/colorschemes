@@ -24,6 +24,12 @@ func New() (*Tmpl, error) {
 	return &Tmpl{tmpl: tmpl}, nil
 }
 
+type TmplContext struct {
+	Metadata colorschemes.Metadata
+	HL       *colorschemes.Highlights
+	Colors   map[string]string
+}
+
 // func (t *Tmpl) Lualine(themesDir string, scheme scheme.Scheme, name string) error {
 // 	f, err := os.Create(filepath.Join(themesDir, name+".lua"))
 // 	if err != nil {
@@ -34,46 +40,22 @@ func New() (*Tmpl, error) {
 // 	return t.tmpl.ExecuteTemplate(f, "lualine.gotmpl", scheme)
 // }
 
-// func (t *Tmpl) HTML(htmlDir string, scheme scheme.Scheme, name string) error {
-// 	f, err := os.Create(filepath.Join(htmlDir, name+".html"))
-// 	if err != nil {
-// 		return err
-// 	}
-// 	defer f.Close()
-// 	return t.tmpl.ExecuteTemplate(f, "html.gotmpl", scheme)
-// }
+func (t *Tmpl) Ghostty(dir string, data *TmplContext) error {
+	f, err := os.Create(filepath.Join(dir, data.Metadata.Name))
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	return t.tmpl.ExecuteTemplate(f, "ghostty.gotmpl", data)
+}
 
-// func (t *Tmpl) Ghostty(dir string, scheme scheme.Scheme, name string) error {
-// 	f, err := os.Create(filepath.Join(dir, name))
-// 	if err != nil {
-// 		return err
-// 	}
-// 	defer f.Close()
-// 	return t.tmpl.ExecuteTemplate(f, "ghostty.gotmpl", scheme)
-// }
-//
-// func (t *Tmpl) WezTerm(weztermDir string, scheme scheme.Scheme, name string) error {
-// 	f, err := os.Create(filepath.Join(weztermDir, name+".toml"))
-// 	if err != nil {
-// 		return err
-// 	}
-// 	defer f.Close()
-// 	return t.tmpl.ExecuteTemplate(f, "wezterm.gotmpl", scheme)
-// }
-
-// func (t *Tmpl) K9s(dir string, scheme scheme.Scheme, name string) error {
-// 	f, err := os.Create(filepath.Join(dir, name+".yaml"))
-// 	if err != nil {
-// 		return err
-// 	}
-// 	defer f.Close()
-// 	return t.tmpl.ExecuteTemplate(f, "k9s.gotmpl", scheme)
-// }
-
-type TmplContext struct {
-	Metadata colorschemes.Metadata
-	HL       *colorschemes.Highlights
-	Colors   map[string]string
+func (t *Tmpl) K9s(dir string, data *TmplContext) error {
+	f, err := os.Create(filepath.Join(dir, data.Metadata.Name+".yaml"))
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	return t.tmpl.ExecuteTemplate(f, "k9s.gotmpl", data)
 }
 
 func (t *Tmpl) Lua(colorDir string, data *TmplContext) error {

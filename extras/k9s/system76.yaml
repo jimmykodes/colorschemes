@@ -1,15 +1,15 @@
 # system76
 foreground: &foreground "#cccccc"
 background: &background "#222222"
-black: &black "#181818"
+black: &black "#080808"
 blue: &blue "#18a9c7"
 green: &green "#6eaa76"
 gray: &gray "#98918d"
 orange: &orange "#d19a66"
-purple: &purple "#D16D9E"
+purple: &purple "#d16d9e"
 red: &red "#f15d22"
 yellow: &yellow "#eece61"
-yellow_bright: &yellow_bright "#ffe275"
+yellow_bright: &yellow_bright "#f8ebbd"
 
 k9s:
   body:

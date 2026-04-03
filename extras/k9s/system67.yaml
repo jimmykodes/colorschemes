@@ -1,7 +1,7 @@
 # system67
 foreground: &foreground "#222222"
 background: &background "#eeeeee"
-black: &black "#181818"
+black: &black "#080808"
 blue: &blue "#148ba3"
 green: &green "#5e9366"
 gray: &gray "#52524f"
@@ -9,7 +9,7 @@ orange: &orange "#9e744d"
 purple: &purple "#ad5a83"
 red: &red "#e95a21"
 yellow: &yellow "#907d3b"
-yellow_bright: &yellow_bright "#a4914f"
+yellow_bright: &yellow_bright "#c3b06e"
 
 k9s:
   body:

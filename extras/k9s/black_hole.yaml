@@ -1,7 +1,7 @@
 # black_hole
 foreground: &foreground "#fde9c3"
 background: &background "#080028"
-black: &black "#00001e"
+black: &black "#000000"
 blue: &blue "#5d6aff"
 green: &green "#ffb102"
 gray: &gray "#817ee0"
@@ -9,7 +9,7 @@ orange: &orange "#fd7e00"
 purple: &purple "#ab1a95"
 red: &red "#fe5683"
 yellow: &yellow "#fdca33"
-yellow_bright: &yellow_bright "#ffde47"
+yellow_bright: &yellow_bright "#fee498"
 
 k9s:
   body:
