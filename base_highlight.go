@@ -46,7 +46,7 @@ var BaseHighlights = &Highlights{
 		Command: "orange",
 		Fg:      "fg",
 		Bg:      "bg",
-		BgAlt:   "black",
+		BgAlt:   "bg_dark",
 	},
 	Normal: Highlight{FG: "fg", BG: "bg"},
 	Groups: map[string]map[string]Highlight{

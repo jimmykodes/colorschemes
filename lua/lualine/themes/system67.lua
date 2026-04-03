@@ -7,7 +7,7 @@ local colors = {
 
 	fg      = '#222222',
 	bg      = '#eeeeee',
-	bg_alt  = '#181818',
+	bg_alt  = '#d5d5d5',
 }
 
 return {

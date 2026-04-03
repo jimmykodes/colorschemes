@@ -1,13 +1,13 @@
 local colors = {
-	normal  = '{{ .Lualine.Normal | index .Colors }}',
-	insert  = '{{ .Lualine.Insert | index .Colors }}',
-	visual  = '{{ .Lualine.Visual | index .Colors }}',
-	replace = '{{ .Lualine.Replace | index .Colors }}',
-	command = '{{ .Lualine.Command | index .Colors }}',
+	normal  = '{{ .HL.Lualine.Normal | index .Colors }}',
+	insert  = '{{ .HL.Lualine.Insert | index .Colors }}',
+	visual  = '{{ .HL.Lualine.Visual | index .Colors }}',
+	replace = '{{ .HL.Lualine.Replace | index .Colors }}',
+	command = '{{ .HL.Lualine.Command | index .Colors }}',
 
-	fg      = '{{ .Lualine.Fg | index .Colors }}',
-	bg      = '{{ .Lualine.Bg | index .Colors }}',
-	bg_alt  = '{{ .Lualine.BgAlt | index .Colors }}',
+	fg      = '{{ .HL.Lualine.Fg | index .Colors }}',
+	bg      = '{{ .HL.Lualine.Bg | index .Colors }}',
+	bg_alt  = '{{ .HL.Lualine.BgAlt | index .Colors }}',
 }
 
 return {

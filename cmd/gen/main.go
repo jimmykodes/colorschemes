@@ -70,14 +70,14 @@ func nvim(templates *tmpl.Tmpl, data *tmpl.TmplContext) error {
 	if err := templates.Theme(luaDir, data); err != nil {
 		return fmt.Errorf("generate themes: %w", err)
 	}
-	//
-	// lualineDir := filepath.Join(nvimDir, "lua", "lualine", "themes")
-	// if err := os.MkdirAll(lualineDir, 0o766); err != nil && !os.IsExist(err) {
-	// 	return fmt.Errorf("make lualine dir: %w", err)
-	// }
-	// if err := templates.Lualine(lualineDir, s, name); err != nil {
-	// 	return fmt.Errorf("generate lualine: %w", err)
-	// }
+
+	lualineDir := filepath.Join(nvimDir, "lua", "lualine", "themes")
+	if err := os.MkdirAll(lualineDir, 0o766); err != nil && !os.IsExist(err) {
+		return fmt.Errorf("make lualine dir: %w", err)
+	}
+	if err := templates.Lualine(lualineDir, data); err != nil {
+		return fmt.Errorf("generate lualine: %w", err)
+	}
 
 	return nil
 }

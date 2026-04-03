@@ -1,13 +1,13 @@
 local colors = {
 	normal  = '#899eea',
 	insert  = '#9ee865',
-	visual  = '#b969f3',
-	replace = '#ff5051',
+	visual  = '#eee1f7',
+	replace = '#fbdfdf',
 	command = '#f09a65',
 
 	fg      = '#d1e5d9',
 	bg      = '#232d36',
-	bg_alt  = '#19232c',
+	bg_alt  = '#0f1317',
 }
 
 return {
