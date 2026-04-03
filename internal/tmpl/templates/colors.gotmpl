@@ -1,5 +1,5 @@
 local M = {}
-{{ $colors := .Colors }}
-{{ range $name, $color := .Colors }}M.{{$name}} = '{{ $color.Value $colors }}'
+
+{{ range $name, $color := .Colors }}M.{{$name}} = '{{ $color }}'
 {{end}}
 return M
