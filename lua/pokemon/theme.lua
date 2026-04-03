@@ -149,8 +149,8 @@ function M.setup()
   hl(0, "TelescopeSelection", { fg = c.hint,  })
 
   -- treesitter
-  hl(0, "TSInstalled", { fg = c.green, bg = c.bg_dark,  })
-  hl(0, "TSMissing", { fg = c.error, bg = c.bg_dark,  })
+  hl(0, "TSInstalled", { link = "Added" })
+  hl(0, "TSMissing", { link = "Removed" })
 
   -- types
   hl(0, "@variable", { fg = c.fg,  })

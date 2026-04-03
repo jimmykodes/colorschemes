@@ -169,8 +169,8 @@ var BaseHighlights = &Highlights{
 			"TabLineFill":    {FG: "white", BG: "bg_light"},
 		},
 		"treesitter": {
-			"TSInstalled": {FG: "green", BG: "bg_dark"},
-			"TSMissing":   {FG: "error", BG: "bg_dark"},
+			"TSInstalled": {Link: "Added"},
+			"TSMissing":   {Link: "Removed"},
 		},
 		"lsp": {
 			"LspCodeLens":                          {FG: "gray"},
