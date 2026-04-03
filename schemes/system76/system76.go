@@ -32,8 +32,8 @@ var System76 = &colorschemes.Colorscheme{
 	Fg:             fg,
 	Bg:             bg,
 	BgDark:         bg.Darken(.1),
-	BgLight:        bg.Lighten(.1),
-	HighlightAltBg: bg.Lighten(.1).Lighten(.1),
+	BgLight:        bg.Lighten(.05),
+	HighlightAltBg: bg.Lighten(.1),
 
 	Red:      red,
 	Orange:   orange,
