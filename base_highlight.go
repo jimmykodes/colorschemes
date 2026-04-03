@@ -28,7 +28,7 @@ var BaseHighlights = &Highlights{
 	K9s: &K9sHL{
 		FG:           "fg",
 		BG:           "bg",
-		Black:        "black",
+		Black:        "dark_gray",
 		Blue:         "blue",
 		Green:        "green",
 		Gray:         "gray",
@@ -142,7 +142,7 @@ var BaseHighlights = &Highlights{
 			"Visual":         {BG: "search"},
 			"VisualNOS":      {BG: "bg_light"},
 			"WarningMsg":     {FG: "error", BG: "bg"},
-			"QuickFixLine":   {BG: "black"},
+			"QuickFixLine":   {BG: "bg_dark"},
 			"Conceal":        {FG: "accent"},
 			"Directory":      {FG: "blue"},
 			"SpecialKey":     {FG: "blue", Bold: true},
@@ -169,8 +169,8 @@ var BaseHighlights = &Highlights{
 			"TabLineFill":    {FG: "white", BG: "bg_light"},
 		},
 		"treesitter": {
-			"TSInstalled": {FG: "green", BG: "black"},
-			"TSMissing":   {FG: "error", BG: "black"},
+			"TSInstalled": {FG: "green", BG: "bg_dark"},
+			"TSMissing":   {FG: "error", BG: "bg_dark"},
 		},
 		"lsp": {
 			"LspCodeLens":                          {FG: "gray"},

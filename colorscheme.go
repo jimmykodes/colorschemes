@@ -31,7 +31,7 @@ type Colorscheme struct {
 	White    Color    `json:"white"`
 	Gray     Color    `json:"gray"`
 	DarkGray Color    `json:"dark_gray"`
-	Black    Color    `json:"black"`
+	
 
 	LightBlack  Color `json:"light_black"`
 	LightRed    Color `json:"light_red"`

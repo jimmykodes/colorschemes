@@ -43,7 +43,6 @@ var DeepPurple = &colorschemes.Colorscheme{
 	White:    white,
 	Gray:     gray,
 	DarkGray: dark_gray,
-	Black:    black,
 
 	LightBlack:  dark_gray,
 	LightRed:    red.Lighten(.20),

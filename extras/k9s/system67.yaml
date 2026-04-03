@@ -1,7 +1,7 @@
 # system67
 foreground: &foreground "#222222"
 background: &background "#eeeeee"
-black: &black "#080808"
+black: &black "#302f2f"
 blue: &blue "#148ba3"
 green: &green "#5e9366"
 gray: &gray "#52524f"

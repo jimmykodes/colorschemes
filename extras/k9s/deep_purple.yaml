@@ -1,7 +1,7 @@
 # deep_purple
 foreground: &foreground "#bec4de"
 background: &background "#030027"
-black: &black "#000000"
+black: &black "#b7c4cd"
 blue: &blue "#90b0ff"
 green: &green "#49a078"
 gray: &gray "#8c92ac"

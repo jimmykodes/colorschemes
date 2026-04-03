@@ -1,7 +1,7 @@
 # black_hole
 foreground: &foreground "#fde9c3"
 background: &background "#080028"
-black: &black "#000000"
+black: &black "#14124d"
 blue: &blue "#5d6aff"
 green: &green "#ffb102"
 gray: &gray "#817ee0"

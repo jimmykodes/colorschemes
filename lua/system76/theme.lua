@@ -67,7 +67,7 @@ function M.setup()
   hl(0, "PmenuSel", { fg = c.bg_light, bg = c.blue,  })
   hl(0, "PmenuThumb", { bg = c.gray,  })
   hl(0, "Question", { fg = c.orange,  })
-  hl(0, "QuickFixLine", { bg = c.black,  })
+  hl(0, "QuickFixLine", { bg = c.bg_dark,  })
   hl(0, "Search", { bg = c.search,  })
   hl(0, "SignColumn", { bg = c.bg,  })
   hl(0, "SpecialComment", { fg = c.comment,  })
@@ -149,8 +149,8 @@ function M.setup()
   hl(0, "TelescopeSelection", { fg = c.hint,  })
 
   -- treesitter
-  hl(0, "TSInstalled", { fg = c.green, bg = c.black,  })
-  hl(0, "TSMissing", { fg = c.error, bg = c.black,  })
+  hl(0, "TSInstalled", { fg = c.green, bg = c.bg_dark,  })
+  hl(0, "TSMissing", { fg = c.error, bg = c.bg_dark,  })
 
   -- types
   hl(0, "@variable", { fg = c.fg,  })

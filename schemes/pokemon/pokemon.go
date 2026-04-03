@@ -84,7 +84,6 @@ var Pokemon = &colorschemes.Colorscheme{
 	White:    white,
 	Gray:     gray,
 	DarkGray: dark_gray,
-	Black:    black,
 
 	LightBlack:  light_black,
 	LightRed:    light_red,

@@ -45,7 +45,6 @@ var System67 = &colorschemes.Colorscheme{
 	White:    white,
 	Gray:     gray,
 	DarkGray: darkGray,
-	Black:    fg.Darken(.1),
 
 	LightBlack:  darkGray,
 	LightRed:    colorschemes.ColorMustFromHex("#b25a5a"),

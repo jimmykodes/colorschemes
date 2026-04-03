@@ -83,7 +83,7 @@ func nvim(templates *tmpl.Tmpl, data *tmpl.TmplContext) error {
 }
 
 func ghostty(templates *tmpl.Tmpl, data *tmpl.TmplContext) error {
-	dir := "./extras/k9s/"
+	dir := "./extras/ghostty/"
 
 	if err := os.MkdirAll(dir, 0o766); err != nil && !os.IsExist(err) {
 		return fmt.Errorf("make ghostty dir: %w", err)
