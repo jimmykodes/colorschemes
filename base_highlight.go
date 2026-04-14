@@ -203,17 +203,17 @@ var BaseHighlights = &Highlights{
 			"QuickScopeSecondary":                  {FG: "hint", Underline: true},
 		},
 		"nvim_tree": {
-			"NvimTreeGitFileDirtyHL": {FG: "sign_diff"},
-			"NvimTreeGitDirtyIcon":   {Link: "NvimTreeGitFileDirtyHL"},
-
-			"NvimTreeGitFileStagedHL": {FG: "sign_add"},
-			"NvimTreeGitStagedIcon":   {Link: "NvimTreeGitFileStagedIcon"},
-
-			"NvimTreeGitFileNewHL": {FG: "sign_change"},
+			"NvimTreeGitFileNewHL": {FG: "purple"},
 			"NvimTreeGitNewIcon":   {Link: "NvimTreeGitFileNewHL"},
 
-			"NvimTreeGitFileRenameHL": {FG: "sign_change"},
-			"NvimTreeGitRenameIcon":   {Link: "NvimTreeGitFileRenameHL"},
+			"NvimTreeGitFileStagedHL": {FG: "green"},
+			"NvimTreeGitStagedIcon":   {Link: "NvimTreeGitFileStagedIcon"},
+
+			"NvimTreeGitFileDirtyHL": {FG: "yellow"},
+			"NvimTreeGitDirtyIcon":   {Link: "NvimTreeGitFileDirtyHL"},
+
+			"NvimTreeGitFileRenamedHL": {FG: "magenta"},
+			"NvimTreeGitRenamedIcon":   {Link: "NvimTreeGitFileRenamedHL"},
 
 			"NvimTreeFolderIcon":       {FG: "blue"},
 			"NvimTreeIndentMarker":     {FG: "gray"},
@@ -226,12 +226,6 @@ var BaseHighlights = &Highlights{
 			"NvimTreeSymlink":          {FG: "cyan"},
 			"NvimTreeRootFolder":       {FG: "fg", Bold: true},
 			"NvimTreeExecFile":         {FG: "green"},
-			// "NvimTreeGitStaged":        {FG: "sign_add"},
-			// "NvimTreeGitNew":           {FG: "sign_add"},
-			// "NvimTreeGitDirty":         {FG: "sign_diff"},
-			// "NvimTreeGitDeleted":       {FG: "sign_delete"},
-			// "NvimTreeGitMerge":         {FG: "sign_change"},
-			// "NvimTreeGitRenamed":       {FG: "sign_change"},
 		},
 		"alpha": {
 			"DashboardHeader":            {FG: "light_blue"},
