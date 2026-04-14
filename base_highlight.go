@@ -206,7 +206,7 @@ var BaseHighlights = &Highlights{
 			"NvimTreeGitFileDirtyHL": {FG: "sign_diff"},
 			"NvimTreeGitDirtyIcon":   {Link: "NvimTreeGitFileDirtyHL"},
 
-			"NvimTreeGitFileStagedHL": {Link: "sign_add"},
+			"NvimTreeGitFileStagedHL": {FG: "sign_add"},
 			"NvimTreeGitStagedIcon":   {Link: "NvimTreeGitFileStagedIcon"},
 
 			"NvimTreeGitFileNewHL": {FG: "sign_change"},
