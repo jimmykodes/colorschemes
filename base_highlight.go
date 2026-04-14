@@ -202,22 +202,18 @@ var BaseHighlights = &Highlights{
 			"QuickScopePrimary":                    {FG: "magenta", Underline: true},
 			"QuickScopeSecondary":                  {FG: "hint", Underline: true},
 		},
-		"telescope": {
-			"TelescopeSelection": {FG: "hint"},
-			"TelescopeMatching":  {FG: "info", Bold: true},
-		},
 		"nvim_tree": {
-			"NvimTreeGitFileDirtyHL":   {FG: "sign_diff"},
-			"NvimTreeGitFileDirtyIcon": {Link: "NvimTreeGitFileDirtyHL"},
+			"NvimTreeGitFileDirtyHL": {FG: "sign_diff"},
+			"NvimTreeGitDirtyIcon":   {Link: "NvimTreeGitFileDirtyHL"},
 
-			"NvimTreeGitFileStagedHL":   {Link: "sign_add"},
-			"NvimTreeGitFileStagedIcon": {Link: "NvimTreeGitFileStagedIcon"},
+			"NvimTreeGitFileStagedHL": {Link: "sign_add"},
+			"NvimTreeGitStagedIcon":   {Link: "NvimTreeGitFileStagedIcon"},
 
-			"NvimTreeGitFileNewHL":   {FG: "sign_change"},
-			"NvimTreeGitFileNewIcon": {Link: "NvimTreeGitFileNewHL"},
+			"NvimTreeGitFileNewHL": {FG: "sign_change"},
+			"NvimTreeGitNewIcon":   {Link: "NvimTreeGitFileNewHL"},
 
-			"NvimTreeGitFileRenameHL":   {FG: "sign_change"},
-			"NvimTreeGitFileRenameIcon": {Link: "NvimTreeGitFileRenameHL"},
+			"NvimTreeGitFileRenameHL": {FG: "sign_change"},
+			"NvimTreeGitRenameIcon":   {Link: "NvimTreeGitFileRenameHL"},
 
 			"NvimTreeFolderIcon":       {FG: "blue"},
 			"NvimTreeIndentMarker":     {FG: "gray"},
