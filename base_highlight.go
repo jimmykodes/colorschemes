@@ -207,14 +207,17 @@ var BaseHighlights = &Highlights{
 			"TelescopeMatching":  {FG: "info", Bold: true},
 		},
 		"nvim_tree": {
-			"NvimTreeGitFileDirtyHL":   {Link: "DiffChange"},
+			"NvimTreeGitFileDirtyHL":   {FG: "sign_diff"},
 			"NvimTreeGitFileDirtyIcon": {Link: "NvimTreeGitFileDirtyHL"},
 
-			"NvimTreeGitFileStagedHL":   {Link: "DiffAdd"},
+			"NvimTreeGitFileStagedHL":   {Link: "sign_add"},
 			"NvimTreeGitFileStagedIcon": {Link: "NvimTreeGitFileStagedIcon"},
 
-			"NvimTreeGitFileNewHL":   {Link: "DiffText"},
+			"NvimTreeGitFileNewHL":   {FG: "sign_change"},
 			"NvimTreeGitFileNewIcon": {Link: "NvimTreeGitFileNewHL"},
+
+			"NvimTreeGitFileRenameHL":   {FG: "sign_change"},
+			"NvimTreeGitFileRenameIcon": {Link: "NvimTreeGitFileRenameHL"},
 
 			"NvimTreeFolderIcon":       {FG: "blue"},
 			"NvimTreeIndentMarker":     {FG: "gray"},
@@ -222,7 +225,6 @@ var BaseHighlights = &Highlights{
 			"NvimTreeVertSplit":        {FG: "bg_light", BG: "bg_light"},
 			"NvimTreeFolderName":       {FG: "blue"},
 			"NvimTreeOpenedFolderName": {FG: "cyan", Italic: true},
-			"NvimTreeOpenedFolderIcon": {Link: "NvimTreeOpenedFolderName"},
 			"NvimTreeImageFile":        {FG: "purple"},
 			"NvimTreeSpecialFile":      {FG: "orange"},
 			"NvimTreeSymlink":          {FG: "cyan"},
