@@ -51,6 +51,7 @@ var BaseHighlights = &Highlights{
 	Normal: Highlight{FG: "fg", BG: "bg"},
 	Groups: map[string]map[string]Highlight{
 		"statusline": {
+			"StatusLine":                   {BG: "bg_light"},
 			"StatusLineModeNormal":         {FG: "bg_light", BG: "blue"},
 			"StatusLineModeNormalInverted": {FG: "blue", BG: "bg_light"},
 
