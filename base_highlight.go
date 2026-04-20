@@ -50,6 +50,25 @@ var BaseHighlights = &Highlights{
 	},
 	Normal: Highlight{FG: "fg", BG: "bg"},
 	Groups: map[string]map[string]Highlight{
+		"statusline": {
+			"StatusLineModeNormal":         {FG: "bg_light", BG: "blue"},
+			"StatusLineModeNormalInverted": {FG: "blue", BG: "bg_light"},
+
+			"StatusLineModeInsert":         {FG: "bg_light", BG: "green"},
+			"StatusLineModeInsertInverted": {FG: "green", BG: "bg_light"},
+
+			"StatusLineModeVisual":         {FG: "bg_light", BG: "purple"},
+			"StatusLineModeVisualInverted": {FG: "purple", BG: "bg_light"},
+
+			"StatusLineModeReplace":         {FG: "bg_light", BG: "red"},
+			"StatusLineModeReplaceInverted": {FG: "red", BG: "bg_light"},
+
+			"StatusLineModePending":         {FG: "bg_light", BG: "yellow"},
+			"StatusLineModePendingInverted": {FG: "yellow", BG: "bg_light"},
+
+			"StatusLineModeCommand":         {FG: "bg_light", BG: "orange"},
+			"StatusLineModeCommandInverted": {FG: "orange", BG: "bg_light"},
+		},
 		"cursor": {
 			"Cursor":     {FG: "cursor_fg", BG: "cursor_bg"},
 			"CursorLine": {BG: "cursor_line"},

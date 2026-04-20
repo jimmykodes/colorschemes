@@ -146,6 +146,20 @@ function M.setup()
   hl(0, "NvimTreeSymlink", { fg = c.cyan,  })
   hl(0, "NvimTreeVertSplit", { fg = c.bg_light, bg = c.bg_light,  })
 
+  -- statusline
+  hl(0, "StatusLineModeCommand", { fg = c.bg_light, bg = c.orange,  })
+  hl(0, "StatusLineModeCommandInverted", { fg = c.orange, bg = c.bg_light,  })
+  hl(0, "StatusLineModeInsert", { fg = c.bg_light, bg = c.green,  })
+  hl(0, "StatusLineModeInsertInverted", { fg = c.green, bg = c.bg_light,  })
+  hl(0, "StatusLineModeNormal", { fg = c.bg_light, bg = c.blue,  })
+  hl(0, "StatusLineModeNormalInverted", { fg = c.blue, bg = c.bg_light,  })
+  hl(0, "StatusLineModePending", { fg = c.bg_light, bg = c.yellow,  })
+  hl(0, "StatusLineModePendingInverted", { fg = c.yellow, bg = c.bg_light,  })
+  hl(0, "StatusLineModeReplace", { fg = c.bg_light, bg = c.red,  })
+  hl(0, "StatusLineModeReplaceInverted", { fg = c.red, bg = c.bg_light,  })
+  hl(0, "StatusLineModeVisual", { fg = c.bg_light, bg = c.purple,  })
+  hl(0, "StatusLineModeVisualInverted", { fg = c.purple, bg = c.bg_light,  })
+
   -- treesitter
   hl(0, "TSInstalled", { link = "Added" })
   hl(0, "TSMissing", { link = "Removed" })
