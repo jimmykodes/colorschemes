@@ -148,6 +148,8 @@ function M.setup()
 
   -- statusline
   hl(0, "StatusLine", { bg = c.bg_light,  })
+  hl(0, "StatusLineFailure", { fg = c.bg_light, bg = c.red,  })
+  hl(0, "StatusLineFailureInverted", { fg = c.red, bg = c.bg_light,  })
   hl(0, "StatusLineModeCommand", { fg = c.bg_light, bg = c.orange,  })
   hl(0, "StatusLineModeCommandInverted", { fg = c.orange, bg = c.bg_light,  })
   hl(0, "StatusLineModeInsert", { fg = c.bg_light, bg = c.green,  })
@@ -160,6 +162,10 @@ function M.setup()
   hl(0, "StatusLineModeReplaceInverted", { fg = c.red, bg = c.bg_light,  })
   hl(0, "StatusLineModeVisual", { fg = c.bg_light, bg = c.purple,  })
   hl(0, "StatusLineModeVisualInverted", { fg = c.purple, bg = c.bg_light,  })
+  hl(0, "StatusLineSuccess", { fg = c.bg_light, bg = c.green,  })
+  hl(0, "StatusLineSuccessInverted", { fg = c.green, bg = c.bg_light,  })
+  hl(0, "StatusLineWarning", { fg = c.bg_light, bg = c.orange,  })
+  hl(0, "StatusLineWarningInverted", { fg = c.orange, bg = c.bg_light,  })
 
   -- treesitter
   hl(0, "TSInstalled", { link = "Added" })

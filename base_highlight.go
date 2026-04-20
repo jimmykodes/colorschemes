@@ -69,6 +69,15 @@ var BaseHighlights = &Highlights{
 
 			"StatusLineModeCommand":         {FG: "bg_light", BG: "orange"},
 			"StatusLineModeCommandInverted": {FG: "orange", BG: "bg_light"},
+
+			"StatusLineSuccess":         {FG: "bg_light", BG: "green"},
+			"StatusLineSuccessInverted": {FG: "green", BG: "bg_light"},
+
+			"StatusLineWarning":         {FG: "bg_light", BG: "orange"},
+			"StatusLineWarningInverted": {FG: "orange", BG: "bg_light"},
+
+			"StatusLineFailure":         {FG: "bg_light", BG: "red"},
+			"StatusLineFailureInverted": {FG: "red", BG: "bg_light"},
 		},
 		"cursor": {
 			"Cursor":     {FG: "cursor_fg", BG: "cursor_bg"},
