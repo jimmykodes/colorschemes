@@ -147,9 +147,10 @@ function M.setup()
   hl(0, "NvimTreeVertSplit", { fg = c.bg_light, bg = c.bg_light,  })
 
   -- statusline
-  hl(0, "StatusLine", { bg = c.bg_light,  })
+  hl(0, "StatusLine", { fg = c.fg, bg = c.bg_light,  })
   hl(0, "StatusLineFailure", { fg = c.bg_light, bg = c.red,  })
   hl(0, "StatusLineFailureInverted", { fg = c.red, bg = c.bg_light,  })
+  hl(0, "StatusLineInverted", { fg = c.bg_light, bg = c.fg,  })
   hl(0, "StatusLineModeCommand", { fg = c.bg_light, bg = c.orange,  })
   hl(0, "StatusLineModeCommandInverted", { fg = c.orange, bg = c.bg_light,  })
   hl(0, "StatusLineModeInsert", { fg = c.bg_light, bg = c.green,  })
