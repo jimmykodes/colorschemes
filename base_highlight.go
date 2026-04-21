@@ -75,6 +75,9 @@ var BaseHighlights = &Highlights{
 			"StatusLineSuccess":         {FG: "bg_light", BG: "green"},
 			"StatusLineSuccessInverted": {FG: "green", BG: "bg_light"},
 
+			"StatusLineInfo":         {FG: "bg_light", BG: "blue"},
+			"StatusLineInfoInverted": {FG: "blue", BG: "bg_light"},
+
 			"StatusLineWarning":         {FG: "bg_light", BG: "orange"},
 			"StatusLineWarningInverted": {FG: "orange", BG: "bg_light"},
 
