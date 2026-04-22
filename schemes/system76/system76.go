@@ -59,6 +59,7 @@ var System76 = &colorschemes.Colorscheme{
 
 	Hint:    colorschemes.ColorMustFromHex("#4FC1FF"),
 	Info:    colorschemes.ColorMustFromHex("#264F78"),
+	Success: signAdd,
 	Warning: colorschemes.ColorMustFromHex("#ff8800"),
 	Error:   colorschemes.ColorMustFromHex("#F44747"),
 

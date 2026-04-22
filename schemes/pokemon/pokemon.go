@@ -97,6 +97,7 @@ var Pokemon = &colorschemes.Colorscheme{
 
 	Hint:    _dragon,
 	Info:    _electric,
+	Success: _light_hp,
 	Warning: orange,
 	Error:   red,
 

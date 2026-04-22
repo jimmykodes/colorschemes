@@ -56,6 +56,7 @@ var DeepPurple = &colorschemes.Colorscheme{
 
 	Hint:    magenta,
 	Info:    blue,
+	Success: green,
 	Warning: yellow,
 	Error:   red,
 	Accent:  dark_gray,

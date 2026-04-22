@@ -31,7 +31,6 @@ type Colorscheme struct {
 	White    Color    `json:"white"`
 	Gray     Color    `json:"gray"`
 	DarkGray Color    `json:"dark_gray"`
-	
 
 	LightBlack  Color `json:"light_black"`
 	LightRed    Color `json:"light_red"`
@@ -45,6 +44,7 @@ type Colorscheme struct {
 
 	Hint    Color `json:"hint"`
 	Info    Color `json:"info"`
+	Success Color `json:"success"`
 	Warning Color `json:"warning"`
 	Error   Color `json:"error"`
 

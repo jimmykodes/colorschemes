@@ -30,16 +30,6 @@ type TmplContext struct {
 	Colors   map[string]string
 }
 
-func (t *Tmpl) Lualine(dir string, data *TmplContext) error {
-	f, err := os.Create(filepath.Join(dir, data.Metadata.Name+".lua"))
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	return t.tmpl.ExecuteTemplate(f, "lualine.gotmpl", data)
-}
-
 func (t *Tmpl) Ghostty(dir string, data *TmplContext) error {
 	f, err := os.Create(filepath.Join(dir, data.Metadata.Name))
 	if err != nil {
