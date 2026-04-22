@@ -41,6 +41,10 @@ var BaseHighlights = &Highlights{
 	Normal: Highlight{FG: "fg", BG: "bg"},
 	Groups: map[string]map[string]Highlight{
 		"statusline": {
+			"TabLine":     {FG: "light_gray", BG: "bg_light"},
+			"TabLineSel":  {FG: "white", BG: "bg_light"},
+			"TabLineFill": {FG: "white", BG: "bg_light"},
+
 			"StatusLine":         {FG: "fg", BG: "bg_light"},
 			"StatusLineInverted": {FG: "bg_light", BG: "fg"},
 
@@ -185,21 +189,17 @@ var BaseHighlights = &Highlights{
 			"Italic":         {Italic: true},
 			"Ignore":         {FG: "cyan", BG: "bg", Bold: true},
 			"Todo":           {FG: "purple", BG: "bg", Bold: true},
-			"Error":          {FG: "error", Bold: true},
-			"Warning":        {FG: "warning"},
-			"Info":           {FG: "info"},
-			"Success":        {FG: "success"},
-			"Hint":           {FG: "hint"},
 
+			"Error":      {FG: "error", Bold: true},
+			"Warning":    {FG: "warning"},
+			"Info":       {FG: "info"},
+			"Success":    {FG: "success"},
+			"Hint":       {FG: "hint"},
 			"ErrorMsg":   {Link: "Error"},
 			"WarningMsg": {Link: "Warning"},
 			"InfoMsg":    {Link: "Info"},
 			"SuccessMsg": {Link: "Success"},
 			"HintMsg":    {Link: "Hint"},
-
-			"TabLine":     {FG: "light_gray", BG: "bg_light"},
-			"TabLineSel":  {FG: "white", BG: "bg_light"},
-			"TabLineFill": {FG: "white", BG: "bg_light"},
 		},
 		"treesitter": {
 			"TSInstalled": {Link: "Added"},
